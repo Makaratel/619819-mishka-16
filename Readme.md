@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Павел Макаевский](https://up.htmlacademy.ru/adaptive/16/user/619819).
-* Наставник: `Неизвестно`.
+* Наставник: [Алексей Дорофеев](https://htmlacademy.ru/profile/id299055).
 
 ---
 
