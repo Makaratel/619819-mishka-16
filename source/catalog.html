@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body>
+  	<header class="header">
+  		<nav class="header__nav main-nav">
+	  		<a class="main-nav__link" href="index.html">
+	  			<img class="main-nav__logo logo" src="img/logo.svg" width="" height="" alt="Наш логотип">
+	  		</a>
+	  		<button class="main-nav__button menu-button">Меню</button>
+	  		<ul class="main-nav__list main-menu">
+	  			<li class="main-menu__item"><a class="main-menu__link" href="catalog.html">Каталог товаров</a></li>
+	  			<li class="main-menu__item"><a class="main-menu__link" href="form.html">Вязание на заказ</a></li>
+	  		</ul>
+	  		<button class="main-nav__button search-button"></button>
+	  		<form class="main-nav__form" action="https://echo.htmlacademy.ru" method="get">
+	  			<input class="main-nav__input" type="search" name="line-search" id="line-search">
+	  		</form>
+	  		<a class="main-nav__link cart" href="#">Корзина: <span class="cart__span">пока пуста</span></a>
+	  	</nav>
+  	</header>
+    
+  	<main>
+      <div class="main-page__wrapper page-title">
+        <ul class="page-title__list sale">
+          <li class="sale__item"><a class="sale__link" href="#">Новые поступления</a></li>
+          <li class="sale__item"><a class="sale__link" href="#">Рспродажа</a></li>
+        </ul>
+
+        <h1 class="page-title__title">Каталог товаров</h1>
+      </div>
+
+  		<section class="goods">
+  			<h2 class="visually-hiden">Наши товары</h2>
+        <ul class="goods__list">
+          <li class="goods__item"><a class="goods__link" href="#">
+            <img class="goods__image" src="good1.png" width="" height="" alt="Зайчик-попрыгайчик">
+            <h3 class="goods__title">Зайчик-попрыгайчик</h3>
+            <p class="goods__text">Рост 30 см, вес 200 г</p>
+            <span class="goods__price">1 200 руб.</span>
+            <button class="goods__button">Добавить в корзину</button>
+          </a></li>
+
+          <li class="goods__item"><a class="goods__link" href="#">
+            <img class="goods__image" src="good2.png" width="" height="" alt="Корзинка для белья">
+            <h3 class="goods__title">Корзинка для белья</h3>
+            <p class="goods__text">Диаметр 15 см, высота 10 см</p>
+            <span class="goods__price">690 руб.</span>
+            <button class="goods__button">Добавить в корзину</button>
+          </a></li>
+
+          <li class="goods__item"><a class="goods__link" href="#">
+            <img class="goods__image" src="good3.png" width="" height="" alt="Большая корзинка для игрушек">
+            <h3 class="goods__title">Большая корзинка для игрушек</h3>
+            <p class="goods__text">Диаметр 30 см, высота 30 см</p>
+            <span class="goods__price">1 500 руб.</span>
+            <button class="goods__button">Добавить в корзину</button>
+          </a></li>
+        </ul>
+  		</section>
+
+  		<section class="video">
+        <h2 class="visually-hiden">Наши видеозаписи</h2>
+        <ul class="video__list">
+          <li class="video__item">
+            <h3 class="video__title">Процесс производства</h3>
+            <img class="video__preview" src="video1.png" width="" height="" alt="Видео процесса производства наших изделий">
+            <button class="video__play">Воспроизвести видео</button>
+            <p class="video__descri[tion">По просьбам наших любимых фолловеров мы мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+            <a class="video__button button" href="#">Сделать заказ</a>
+          </li>
+        </ul>
+      </section>
+  	</main>
+
+  	<footer class="footer">
+  		<img class="footer__logo logo" src="logo.svg" width="" height="" alt="Наш логотип">
+  		<ul class="footer__list">
+  			<li class="footer__item"><a class="footer__link" href="#">Инстаграм</a></li>
+  			<li class="footer__item"><a class="footer__link" href="#">Фейсбук</a></li>
+  			<li class="footer__item"><a class="footer__link" href="#">Твиттер</a></li>
+  		</ul>
+
+  		<p class="footer__text">
+  			<span class="footer__span">Разработано</span>
+  			<a class="footer__link" href="#">HTML Academy</a>
+  		</p>
+  	</footer>
+  </body>
+</html>
