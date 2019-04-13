@@ -6,7 +6,6 @@
 html {
   font-family: sans-serif;
   text-size-adjust: 100%;
-  text-size-adjust: 100%;
 }
 
 /* Remove default margin. */
@@ -297,12 +296,12 @@ input {
     cursor: pointer;
   }
 
-/*
-// * It's recommended that you don't attempt to style these elements.
-// * Firefox's implementation doesn't respect box-sizing, padding, or width.
-// * 1. Address box sizing set to `content-box` in IE 8/9/10.
-// * 2. Remove excess padding in IE 8/9/10.
-*/
+  /*
+  It's recommended that you don't attempt to style these elements.
+  Firefox's implementation doesn't respect box-sizing, padding, or width.
+  1. Address box sizing set to `content-box` in IE 8/9/10.
+  2. Remove excess padding in IE 8/9/10.
+  */
 
   &[type="checkbox"],
   &[type="radio"] {
@@ -310,11 +309,11 @@ input {
     padding: 0;
   }
 
-/*
-//  * Fix the cursor style for Chrome's increment/decrement buttons. For certain
-//  * `font-size` values of the `input`, it causes the cursor style of the
-//  * decrement button to change from `default` to `text`.
-*/
+  /*
+  Fix the cursor style for Chrome's increment/decrement buttons. For certain
+  `font-size` values of the `input`, it causes the cursor style of the
+  decrement button to change from `default` to `text`.
+  */
 
   &[type="number"] {
     &::-webkit-inner-spin-button,
@@ -323,20 +322,20 @@ input {
     }
   }
 
-/*
-// * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
-// * 2. Address `box-sizing` set to `border-box` in Safari and Chrome (include `-moz` to future-proof).
-*/
+  /*
+  1. Address `appearance` set to `searchfield` in Safari and Chrome.
+  2. Address `box-sizing` set to `border-box` in Safari and Chrome (include `-moz` to future-proof).
+  */
 
   &[type="search"] {
     appearance: textfield;
     box-sizing: content-box;
 
-/*
-//  * Remove inner padding and search cancel button in Safari and Chrome on OS X.
-//  * Safari (but not Chrome) clips the cancel button when the search input has
-//  * padding (and `textfield` appearance).
-*/
+    /*
+    Remove inner padding and search cancel button in Safari and Chrome on OS X.
+    Safari (but not Chrome) clips the cancel button when the search input has
+    padding (and `textfield` appearance).
+    */
     &::-webkit-search-cancel-button,
     &::-webkit-search-decoration {
       appearance: none;
