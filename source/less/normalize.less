@@ -5,8 +5,8 @@
 */
 html {
   font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 /* Remove default margin. */
@@ -98,7 +98,7 @@ abbr[title] {
 
 b,
 strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /*
@@ -123,8 +123,8 @@ h1 {
 */
 
 mark {
-  background: #ff0;
-  color: #000;
+  background: #ffff00;
+  color: #000000;
 }
 
 /*
@@ -186,7 +186,6 @@ figure {
 */
 
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -207,7 +206,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: monospace;
   font-size: 1em;
 }
 
@@ -260,7 +259,7 @@ select {
 
 button,
 html input[type="button"] {
-  -webkit-appearance: button;
+  appearance: button;
   cursor: pointer;
 }
 
@@ -277,7 +276,7 @@ html input[disabled] {
 //  * Remove inner padding and border in Firefox 4+.
 */
 
-button
+button,
 input {
   &::-moz-focus-inner {
     border: 0;
@@ -291,10 +290,11 @@ input {
 
 input {
   line-height: normal;
+
   &[type="reset"],
   &[type="submit"] {
-    -webkit-appearance: button;
-     cursor: pointer;
+    appearance: button;
+    cursor: pointer;
   }
 
 /*
@@ -307,7 +307,7 @@ input {
   &[type="checkbox"],
   &[type="radio"] {
     box-sizing: border-box;
-     padding: 0;
+    padding: 0;
   }
 
 /*
@@ -329,9 +329,7 @@ input {
 */
 
   &[type="search"] {
-    -webkit-appearance: textfield;
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
+    appearance: textfield;
     box-sizing: content-box;
 
 /*
@@ -341,7 +339,7 @@ input {
 */
     &::-webkit-search-cancel-button,
     &::-webkit-search-decoration {
-      -webkit-appearance: none;
+      appearance: none;
     }
   }
 }
