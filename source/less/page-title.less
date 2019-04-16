@@ -1,0 +1,86 @@
+.sale {
+  display: none;
+}
+
+.page-title__text {
+  display: none;
+}
+
+.page-title {
+  margin-bottom: 30px;
+  background-color: rgba(241, 241, 241, 1);
+
+  &--index {
+    height: 490px;
+    background-image: url("../img/hero-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+  }
+
+  &--extra {
+    height: 175px;
+  }
+}
+
+.page-title__title {
+  padding-top: 75px;
+  margin: 0 20px;
+  margin-bottom: 126px;
+
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.catalog-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-menu__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+
+.catalog-menu__item--interier {
+  background-color: rgba(99, 209, 187, 1);
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 64px;
+    top: 50%;
+    left: 250px;
+    margin-top: -32px;
+    background-image: url("../img/icon-interior.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.catalog-menu__item--toys {
+  background-color: rgba(86, 195, 176, 1);
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 64px;
+    top: 50%;
+    left: 240px;
+    margin-top: -32px;
+    background-image: url("../img/icon-toy.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.catalog-menu__link {
+  margin-left: 30px;
+  width: 130px;
+  font-size: 19px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 1);
+}

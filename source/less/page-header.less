@@ -1,0 +1,42 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+}
+
+.page-header__wrapper {
+  height: 80px;
+}
+
+.page-header__logo {
+  margin-top: 20px;
+}
+
+.menu-button {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 25px;
+    background-color: black;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 25px;
+    background-color: black;
+    transform: rotate(-45deg);
+  }
+}

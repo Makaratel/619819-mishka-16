@@ -3,26 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <header class="header">
-      <nav class="header__nav main-nav">
-        <a class="main-nav__link" href="index.html"><img class="main-nav__logo logo" src="img/logo.svg" width="1" height="1" alt="Наш логотип"></a>
-        <button class="main-nav__button menu-button" type="button">Меню</button>
+    <header class="page-header">
+      <div class="page-header__wrapper container">
+        <a class="page-header__link" href="index.html"><img class="page-header__logo logo" src="img/logo-mobile.svg" width="100" height="40" alt="Наш логотип"></a>
+        <button class="page-header__button menu-button" type="button"></button>
+      </div>
+      <nav class="page-header__nav main-nav">
         <ul class="main-nav__list main-menu">
           <li class="main-menu__item"><a class="main-menu__link" href="catalog.html">Каталог товаров</a></li>
           <li class="main-menu__item"><a class="main-menu__link" href="form.html">Вязание на заказ</a></li>
+          <li class="main-menu__item"><a class="main-menu__link search-link" href="#">Поиск по сайту</a></li>
+          <li class="main-menu__item"><a class="main-menu__link cart" href="#">Корзина: <span class="cart__span">пока пуста</span></a></li>
         </ul>
-        <button class="main-nav__button search-button" type="button"></button>
+
         <form class="main-nav__form" action="https://echo.htmlacademy.ru" method="get">
           <input class="main-nav__input" type="search" name="line-search" id="line-search">
         </form>
-        <a class="main-nav__link cart" href="#">Корзина: <span class="cart__span">пока пуста</span></a>
       </nav>
     </header>
 
     <main>
-      <div class="page__wrapper page-title">
+      <div class="page__wrapper page-title page-title--extra">
         <ul class="page-title__list sale">
           <li class="sale__item"><a class="sale__link" href="#">Новые поступления</a></li>
           <li class="sale__item"><a class="sale__link" href="#">Рспродажа</a></li>
@@ -32,15 +36,15 @@
         <h1 class="page-title__title">Вязание на заказ</h1>
       </div>
 
-      <section class="offer">
+      <section class="offer container">
         <h2 class="visually-hidden">Форма заказа</h2>
         <p class="offer__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
         <form class="offer__form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="offer__field type-field">
-            <legend class="type-field__title">Тип</legend>
+            <legend class="type-field__title field-title">Тип</legend>
             <ul class="type-field__list">
               <li class="type-field__item">
-                <input class="type-field__input" type="radio" name="type" id="accessoire">
+                <input class="type-field__input" type="radio" name="type" id="accessoire" checked>
                 <label class="type-field__label">Аксессуар для интерьера</label>
               </li>
 
@@ -52,15 +56,15 @@
           </fieldset>
 
           <fieldset class="offer__field color-field">
-            <legend class="color-field__title">Цвет</legend>
+            <legend class="color-field__title field-title">Цвет</legend>
             <ul class="color-field__list">
               <li class="color-field__item">
-                <input class="color-field__input" type="checkbox" name="white" id="white">
+                <input class="color-field__input" type="checkbox" name="white" id="white" checked>
                 <label class="color-field__label" for="white">Белый</label>
               </li>
 
               <li class="color-field__item">
-                <input class="color-field__input" type="checkbox" name="gray" id="gray">
+                <input class="color-field__input" type="checkbox" name="gray" id="gray" checked>
                 <label class="color-field__label" for="gray">Серый</label>
               </li>
 
@@ -87,50 +91,50 @@
           </fieldset>
 
           <fieldset class="offer__field name-field">
-            <legend class="name-field__title">ФИО</legend>
-            <ul class="name-field__lsit">
+            <legend class="name-field__title field-title">ФИО</legend>
+            <ul class="name-field__list">
               <li class="name-field__item">
                 <label class="name-field__label">Имя:</label>
-                <input class="name-field__input" type="text" name="surname" id="surname">
+                <input class="name-field__input field-input" type="text" name="surname" id="surname" placeholder="Введите ваше имя*">
               </li>
 
               <li class="name-field__item">
                 <label class="name-field__label">Фамилия:</label>
-                <input class="name-field__input" type="text" name="name" id="name">
+                <input class="name-field__input field-input" type="text" name="name" id="name" placeholder="Укажите фамилию*">
               </li>
 
               <li class="name-field__item">
                 <label class="name-field__label">Отчество:</label>
-                <input class="name-field__input" type="text" name="lastname" id="lastname">
+                <input class="name-field__input field-input" type="text" name="lastname" id="lastname" placeholder="Отчество, если желаете*">
               </li>
             </ul>
           </fieldset>
 
           <div class="offer__wrapper">
             <fieldset class="offer__field tel-field">
-              <legend class="tel-field__title">ТЕЛ</legend>
-              <input class="tel-field__input" type="number" name="tel" id="tel">
+              <legend class="tel-field__title field-title">ТЕЛ</legend>
+              <input class="tel-field__input field-input" type="tel" name="tel" id="tel" placeholder="+7 XXX XXX XX XX*" pattern="+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}">
             </fieldset>
 
             <fieldset class="offer__field mail-field">
-              <legend class="mail-field__title">E-MAIL</legend>
-              <input class="mail-field__input" type="e-mail" name="mail" id="mail">
+              <legend class="mail-field__title field-title">E-MAIL</legend>
+              <input class="mail-field__input field-input" type="e-mail" name="mail" id="mail" placeholder="Ваш Email*">
             </fieldset>
           </div>
 
           <fieldset class="offer__field extra-field">
-            <legend class="extra-field__title">ДОП</legend>
-            <textarea class="extra-field__area"></textarea>
+            <legend class="extra-field__title field-title">ДОП</legend>
+            <textarea class="extra-field__area" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </fieldset>
 
-          <p class="offer__text">*Поля обязательные для заполнения</p>
-          <button class="offer__button" type="button">Отправить заказ</button>
+          <p class="offer__text-require">*Поля обязательные для заполнения</p>
+          <button class="offer__button button" type="button">Отправить заказ</button>
         </form>
       </section>
     </main>
 
     <footer class="footer">
-      <a class="footer__link" href="index.html"><img class="footer__logo logo" src="logo.svg" width="1" height="1" alt="Наш логотип"></a>
+      <a class="footer__link" href="index.html"><img class="footer__logo logo" src="img/logo-mobile.svg" width="100" height="40" alt="Наш логотип"></a>
       <ul class="footer__list social">
         <li class="social__item"><a class="social__link" href="#">Инстаграм</a></li>
         <li class="social__item"><a class="social__link" href="#">Фейсбук</a></li>
@@ -139,7 +143,7 @@
 
       <div class="footer__wrapper">
         <span class="footer__span">Разработано</span>
-        <a class="footer__link" href="#"><img class="footer__image" src="#" width="1" height="1" alt="HTML Academy"></a>
+        <a class="footer__link" href="https://htmlacademy.ru/"><img class="footer__image" src="img/htmlacademy.svg" width="30" height="35" alt="HTML Academy"></a>
       </div>
     </footer>
   </body>
