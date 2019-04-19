@@ -36,6 +36,11 @@
   }
 }
 
+.popular-good__image {
+    width: 260px;
+    height: 315px;
+}
+
 .popular-good__price {
   margin-bottom: 30px;
   text-align: center;
@@ -46,7 +51,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    max-height: 410px;
+    max-height: 450px;
   }
 
   .popular-good__title {
@@ -76,8 +81,13 @@
     line-height: 30px;
   }
 
+  .popular-good__picture {
+    order: 1;
+  }
+
   .popular-good__image {
-    order: 3;
+    width: 335px;
+    height: 400px;
   }
 
   .popular-good__price {
@@ -93,6 +103,14 @@
 }
 
 @media (min-width: @desktop-width) {
+  .promo {
+    margin-top: 260px;
+  }
+
+  .popular-good__title {
+    z-index: 2;
+  }
+
   .popular-good {
     margin-left: 185px;
   }
@@ -103,6 +121,11 @@
     left: -140px;
     width: 80px;
     text-align: center;
+  }
+
+  .popular-good__image {
+    width: 525px;
+    height: 630px;
   }
 }
 

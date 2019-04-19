@@ -27,9 +27,32 @@
     flex-wrap: wrap;
   }
 
+  .goods__image {
+    width: 335px;
+    height: 335px;
+  }
+
   .goods__wrapper{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
+}
+
+@media (min-width: @desktop-width) {
+  .goods__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .goods__item{
+    width: 315px;
+  }
+
+  .goods__image {
+    width: 315px;
+    height: 460px;
+  }
+
 }

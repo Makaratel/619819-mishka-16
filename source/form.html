@@ -8,7 +8,13 @@
   <body>
     <header class="page-header">
       <nav class="page-header__nav main-nav container">
-        <a class="main-nav__logo" href="index.html"></a>
+        <a class="main-nav__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="main-nav__image" src="img/logo-mobile.svg" width="120" height="80" alt="Mishka">
+          </picture>
+        </a>
         <button class="main-nav__button menu-button" type="button"></button>
 
         <ul class="main-nav__list main-menu">
@@ -151,7 +157,7 @@
 
     <footer class="footer">
       <div class="container">
-        <a class="footer__logo" href="index.html"><img class="footer__logo logo" src="img/logo-mobile.svg" width="100" height="40" alt="Наш логотип"></a>
+        <a class="footer__logo" href="index.html"><img class="footer__logo logo" src="img/logo-mobile.svg" width="100" height="40" alt="Mishka"></a>
         <ul class="footer__list social">
           <li class="social__item"><a class="social__link" href="#">Инстаграм</a></li>
           <li class="social__item"><a class="social__link" href="#">Фейсбук</a></li>
