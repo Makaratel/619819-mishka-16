@@ -1,0 +1,125 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.main-nav__logo {
+  display: block;
+  height: 80px;
+  background-image: url(../img/logo-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.menu-button {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 25px;
+    background-color: black;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 25px;
+    background-color: black;
+    transform: rotate(-45deg);
+  }
+}
+
+.main-menu, .minor-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-menu__item, .minor-menu__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+.main-nav__form {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .main-nav__logo {
+    width: 120px;
+    background-image: url(../img/logo-tablet.svg);
+  }
+
+  .menu-button {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  .main-menu {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: -60px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 15px;
+  }
+
+  .minor-menu {
+    margin-left: auto;
+    display: flex;
+  }
+}
+
+/*
+@media (min-width: @desktop-width) {
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-nav__logo {
+    order: 2;
+    width: 150px;
+    background-image: url(../img/logo-desktop.svg);
+  }
+
+  .main-menu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .minor-menu {
+    order: 3;
+    display: flex;
+  }
+}
+*/

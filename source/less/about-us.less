@@ -1,0 +1,37 @@
+.about-us__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about-us__item {
+  margin-top: 50px;
+}
+
+@media (min-width: @tablet-width) {
+  .about-us__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .about-us__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 280px;
+  }
+
+  .about-us__item {
+    width: 220px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-us__title {
+    margin-left: 185px;
+  }
+
+  .about-us__list {
+    margin-left: 185px;
+  }
+}
