@@ -1,5 +1,6 @@
 .sale {
   display: none;
+  .list-clean();
 }
 
 .page-title__text {
@@ -47,15 +48,13 @@
   background-color: rgba(99, 209, 187, 1);
 
   &::after {
-    position: absolute;
-    content: "";
     width: 60px;
     height: 64px;
     top: 50%;
     right: 50px;
     margin-top: -32px;
     background-image: url("../img/icon-interior.svg");
-    background-repeat: no-repeat;
+    .psevdo-elem();
   }
 }
 
@@ -63,15 +62,13 @@
   background-color: rgba(86, 195, 176, 1);
 
   &::after {
-    position: absolute;
-    content: "";
     width: 60px;
     height: 64px;
     top: 50%;
     right: 50px;
     margin-top: -32px;
     background-image: url("../img/icon-toy.svg");
-    background-repeat: no-repeat;
+    .psevdo-elem();
   }
 }
 
@@ -96,6 +93,8 @@
   }
 
   .page-title__text {
+    margin: 0;
+    padding: 0;
     display: block;
     text-align: right;
   }
@@ -130,8 +129,5 @@
   .sale {
     display: flex;
     flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
   }
 }

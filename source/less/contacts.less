@@ -1,7 +1,5 @@
 .contacts {
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 300;
+  .text-normal();
 }
 
 .contacts__table {
@@ -21,14 +19,12 @@
     position: relative;
 
     &::after {
-      position: absolute;
-      content: "";
       top: 0;
       right: 0;
       width: 50px;
       height: 80px;
       background-image: url(../img/icon-flag.svg);
-      background-repeat: no-repeat;
+      .psevdo-elem();
     }
   }
 
@@ -62,14 +58,12 @@
     max-height: 410px;
 
     &::after {
-      position: absolute;
-      content: "";
       top: 0;
       left: 80px;
       width: 50px;
       height: 80px;
       background-image: url(../img/icon-flag.svg);
-      background-repeat: no-repeat;
+      .psevdo-elem();
     }
   }
 

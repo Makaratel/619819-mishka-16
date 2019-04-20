@@ -5,7 +5,14 @@
 
   font-size: 17px;
   line-height: 24px;
-  text-align: center;
+}
+
+.main-nav__logo {
+  display: flex; justify-content: center;
+}
+
+.main-nav__image {
+  display: flex;
 }
 
 .menu-button {
@@ -18,21 +25,19 @@
   cursor: pointer;
 
   &::before {
-    position: absolute;
-    content: "";
     width: 2px;
     height: 25px;
     background-color: black;
     transform: rotate(45deg);
+    .psevdo-elem();
   }
 
   &::after {
-    position: absolute;
-    content: "";
     width: 2px;
     height: 25px;
     background-color: black;
     transform: rotate(-45deg);
+    .psevdo-elem();
   }
 }
 
@@ -56,7 +61,11 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+  }
+
+  .main-menu__item, .minor-menu__item, .main-nav__image {
+    height: 90px;
   }
 
   .menu-button {

@@ -11,8 +11,6 @@
   position: relative;
 
   &::after {
-    position: absolute;
-    content: "";
     width: 100px;
     height: 75px;
     top: 50%;
@@ -22,15 +20,14 @@
 
     background-image: url("../img/icon-play.svg");
     cursor: pointer;
+    .psevdo-elem();
   }
 }
 
 .video__description {
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
   font-size: 13px;
   line-height: 24px;
+  .text-normal();
 }
 
 @media (min-width: @tablet-width) {

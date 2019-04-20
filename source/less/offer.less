@@ -4,11 +4,9 @@
 }
 
 .offer__text {
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 300;
   font-size: 13px;
   line-height: 24px;
+  .text-normal();
 }
 
 .offer__field {
@@ -16,13 +14,12 @@
   border: none;
 
   &::after {
-    position: absolute;
-    content: "";
     height: 1px;
     width: 70%;
     top: 10px;
     right: 0;
     background-color: rgba(98, 209, 186, 1);
+    .psevdo-elem();
   }
 }
 
@@ -46,11 +43,9 @@
 }
 
 .offer__text-require {
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 300;
   font-size: 14px;
   line-height: 16px;
+  .text-normal();
 }
 
 .extra-field__area {

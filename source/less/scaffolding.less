@@ -21,12 +21,10 @@
 body {
   width: @mobile-width;
   margin: 0 auto;
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 800;
   font-size: 15px;
   line-height: 20px;
   color: @text-color;
+  .text-bold();
   outline: 2px solid blue
 }
 
@@ -57,13 +55,10 @@ a {
 .button {
   display: block;
   padding: 15px 0;
-
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 800;
   text-transform: uppercase;
   text-align: center;
   border: 2px solid rgba(0, 0, 0, 1);
+  .text-bold();
 }
 
 @media (min-width: @tablet-width) {
