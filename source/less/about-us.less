@@ -1,11 +1,44 @@
 .about-us__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  .list-clean();
 }
 
 .about-us__item {
   margin-top: 50px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 35px;
+    top: -40px;
+    left: 5px;
+    background-repeat: no-repeat;
+  }
+
+  &--flower::after {
+    background-image: url(../img/icon-feature-flower.svg);
+  }
+
+  &--money::after {
+    background-image: url(../img/icon-feature-money.svg);
+  }
+
+  &--heart::after {
+    background-image: url(../img/icon-feature-heart.svg);
+  }
+
+  &--ball::after {
+    background-image: url(../img/icon-feature-ball.svg);
+  }
+
+  &--rocket::after {
+    background-image: url(../img/icon-feature-rocket.svg);
+  }
+
+  &--gift::after {
+    background-image: url(../img/icon-feature-gift.svg);
+  }
 }
 
 @media (min-width: @tablet-width) {
