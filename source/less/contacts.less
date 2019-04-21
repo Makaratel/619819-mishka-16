@@ -15,7 +15,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .contacts {
+  .contacts__wrapper:first-child {
     position: relative;
 
     &::after {
@@ -55,37 +55,27 @@
     flex-direction: column;
     align-content: space-between;
     position: relative;
-    max-height: 410px;
-
-    &::after {
-      top: 0;
-      left: 80px;
-      width: 50px;
-      height: 80px;
-      background-image: url("../img/icon-flag.svg");
-      .psevdo-elem();
-    }
-  }
-
-  .contacts__title {
-    margin-left: 185px;
-  }
-
-  .contacts__table {
-    margin-left: 185px;
-    width: auto;
-  }
-
-  .contacts__image {
-    order: 2;
-  }
-
-  .contacts__map {
-    width: 525px;
+    max-height: 460px;
   }
 
   .contacts__wrapper {
     margin-left: 185px;
     width: auto;
+
+    &::after {
+      left: -80px;
+    }
+  }
+
+  .contacts__table {
+    width: auto;
+  }
+
+  .contacts__link {
+    order: 2;
+  }
+
+  .contacts__map {
+    width: 525px;
   }
 }
