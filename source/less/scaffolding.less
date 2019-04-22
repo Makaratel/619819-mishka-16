@@ -19,13 +19,11 @@
 }
 
 body {
-  width: @mobile-width;
   margin: 0 auto;
   font-size: 15px;
   line-height: 20px;
   color: @text-color;
   .text-bold();
-  outline: 2px solid blue;
 }
 
 a {
@@ -62,9 +60,6 @@ a {
 }
 
 @media (min-width: @tablet-width) {
-  body {
-    width: @tablet-width;
-  }
 
   .container {
     width: 668px;
@@ -77,9 +72,6 @@ a {
 }
 
 @media (min-width: @desktop-width) {
-  body {
-    width: @desktop-width;
-  }
 
   .container {
     width: 1050px;
