@@ -1,14 +1,6 @@
-.sale {
-  display: none;
-}
-
-.page-title__text {
-  display: none;
-}
-
 .page-title {
   margin-bottom: 30px;
-  background-color: rgba(241, 241, 241, 1);
+  background-color: rgba(249, 249, 249, 1);
 
   &--index {
     height: 490px;
@@ -22,6 +14,15 @@
   }
 }
 
+.page-title__list {
+  display: none;
+  .list-clean();
+}
+
+.page-title__text {
+  display: none;
+}
+
 .page-title__title {
   padding-top: 75px;
   margin: 0 20px;
@@ -33,9 +34,7 @@
 }
 
 .catalog-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  .list-clean();
 }
 
 .catalog-menu__item {
@@ -43,21 +42,20 @@
   display: flex;
   align-items: center;
   height: 100px;
+  width: 100%;
 }
 
 .catalog-menu__item--interier {
   background-color: rgba(99, 209, 187, 1);
 
   &::after {
-    position: absolute;
-    content: "";
     width: 60px;
     height: 64px;
     top: 50%;
-    left: 250px;
+    right: 50px;
     margin-top: -32px;
     background-image: url("../img/icon-interior.svg");
-    background-repeat: no-repeat;
+    .psevdo-elem();
   }
 }
 
@@ -65,15 +63,13 @@
   background-color: rgba(86, 195, 176, 1);
 
   &::after {
-    position: absolute;
-    content: "";
     width: 60px;
     height: 64px;
     top: 50%;
-    left: 240px;
+    right: 50px;
     margin-top: -32px;
     background-image: url("../img/icon-toy.svg");
-    background-repeat: no-repeat;
+    .psevdo-elem();
   }
 }
 
@@ -83,4 +79,52 @@
   font-size: 19px;
   line-height: 24px;
   color: rgba(255, 255, 255, 1);
+}
+
+@media (min-width: @tablet-width) {
+  .page-title--index {
+    height: 745px;
+    background-image: url("../img/hero-tablet@1x.jpg");
+    background-position: 50% 0;
+    text-align: center;
+  }
+
+  .page-title__text {
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-align: right;
+  }
+
+  .page-title__title {
+    margin: 0 auto;
+    margin-bottom: 450px;
+    padding-top: 45px;
+    width: 600px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .catalog-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .catalog-menu__item {
+    width: 50%;
+    height: 120px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-title--index {
+    margin-bottom: 120px;
+    background-image: url("../img/hero-desktop@1x.jpg");
+    background-position: 50% 0;
+  }
+
+  .page-title__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

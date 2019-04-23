@@ -1,9 +1,7 @@
 .controls {
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
   margin-bottom: 40px;
+  .list-clean();
 }
 
 .controls__button {
@@ -23,5 +21,18 @@
     background-image: url("../img/icon-right-arrow.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .controls {
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+  }
+
+  .controls__button {
+    width: 85px;
+    border: none;
   }
 }
