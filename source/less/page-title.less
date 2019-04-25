@@ -1,5 +1,5 @@
 .page-title {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   background-color: rgba(249, 249, 249, 1);
 
   &--index {
@@ -21,19 +21,23 @@
 
 .page-title__text {
   display: none;
+  .text-normal();
 }
 
 .page-title__title {
-  padding-top: 75px;
-  margin: 0 20px;
-  margin-bottom: 126px;
-
+  margin: 0 auto;
   font-size: 27px;
   line-height: 30px;
   text-align: center;
 }
 
+.main-page__wrapper .page-title__title {
+  padding-top: 60px;
+  margin-bottom: 140px;
+}
+
 .catalog-menu {
+  display: block;
   .list-clean();
 }
 
@@ -52,7 +56,7 @@
     width: 60px;
     height: 64px;
     top: 50%;
-    right: 50px;
+    right: 40px;
     margin-top: -32px;
     background-image: url("../img/icon-interior.svg");
     .psevdo-elem();
@@ -66,7 +70,7 @@
     width: 60px;
     height: 64px;
     top: 50%;
-    right: 50px;
+    right: 40px;
     margin-top: -32px;
     background-image: url("../img/icon-toy.svg");
     .psevdo-elem();
@@ -83,26 +87,46 @@
 
 @media (min-width: @tablet-width) {
   .page-title--index {
+    position: relative;
+    margin-bottom: 35px;
     height: 745px;
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position: 50% 0;
     text-align: center;
+
+    &::after {
+      width: 100%;
+      height: 13px;
+      bottom: 0;
+      left: 0;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      .psevdo-elem();
+    }
+  }
+
+  .page-title__wrapper {
+    padding-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 
   .page-title__text {
     margin: 0;
     padding: 0;
-    display: block;
-    text-align: right;
+    display: inline-block;
   }
 
   .page-title__title {
-    margin: 0 auto;
-    margin-bottom: 450px;
-    padding-top: 45px;
-    width: 600px;
     font-size: 43px;
     line-height: 50px;
+  }
+
+  .main-page__wrapper .page-title__title {
+    margin-top: 115px;
+    margin-bottom: 370px;
+    padding-top: 0px;
+    width: 600px;
   }
 
   .catalog-menu {
@@ -118,13 +142,36 @@
 
 @media (min-width: @desktop-width) {
   .page-title--index {
-    margin-bottom: 120px;
+    margin-bottom: 135px;
     background-image: url("../img/hero-desktop@1x.jpg");
     background-position: 50% 0;
+
+    &::after {
+      height: 17px;
+    }
+  }
+
+  .page-title__wrapper {
+    display: flex;
+    justify-content: space-between;
   }
 
   .page-title__list {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .page-title__item {
+    margin-right: 30px;
+  }
+
+  .page-title__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .main-page__wrapper .page-title__title {
+    margin-bottom: 355px;
+    width: 700px;
   }
 }

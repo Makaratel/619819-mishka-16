@@ -1,6 +1,27 @@
+.feedbacks {
+  position: relative;
+  margin-bottom: 90px;
+
+  &::after {
+    .psevdo-elem();
+    width: 100%;
+    height: 6px;
+    bottom: -50px;
+    left: 0;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: auto 6px;
+    background-repeat: repeat;
+  }
+}
+
+.feedbacks__title {
+  margin: 0;
+  padding: 0;
+}
+
 .feedbacks__list {
-  margin-bottom: 35px;
   .list-clean();
+  margin-bottom: 35px;
 }
 
 .quote {
@@ -10,7 +31,7 @@
 }
 
 .quote__text {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .quote__author {
@@ -19,16 +40,28 @@
 
 @media (min-width: @tablet-width) {
   .feedbacks {
-    position: relative;
+    padding-top: 85px;
+    margin-bottom: 150px;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0% 0%;
-    padding-bottom: 120px;
+
+    &::after {
+      height: 17px;
+      bottom: -85px;
+      background-size: auto 17px;
+    }
+  }
+
+  .feedbacks .container {
+    position: relative;
+    padding-bottom: 20px;
   }
 
   .feedbacks__title {
     font-size: 43px;
     line-height: 50px;
+    margin-bottom: 30px;
   }
 
   .quote {
@@ -40,6 +73,7 @@
   .quote__text {
     font-size: 17px;
     line-height: 30px;
+    margin-bottom: 60px;
   }
 
   .feedbacks__button {
@@ -51,11 +85,34 @@
 }
 
 @media (min-width: @desktop-width) {
+  .feedbacks {
+    padding-top: 0px;
+    margin-bottom: 165px;
+    background-image: none;
+
+    &::after {
+      height: 25px;
+      bottom: -95px;
+      background-size: auto 25px;
+    }
+  }
+
+  .feedbacks .container {
+    padding-top: 85px;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+  }
+
   .feedbacks__title {
     margin-left: 185px;
   }
 
   .feedbacks__list {
     margin-left: 185px;
+  }
+
+  .feedbacks__button {
+    top: 85px;
   }
 }
