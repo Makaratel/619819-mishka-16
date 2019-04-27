@@ -74,7 +74,7 @@
 .type-field__label {
   position: relative;
 
-  &::before{
+  &::before {
     width: 15px;
     height: 15px;
     top: -5px;
@@ -88,8 +88,8 @@
   }
 }
 
-#accessoire:checked ~ .type-field__label[for="accessoire"]::before,
-#toy:checked ~ .type-field__label[for="toy"]::before {
+#accessoire:checked ~ label[for="accessoire"]::before,
+#toy:checked ~ label[for="toy"]::before {
   background-color: rgba(98, 209, 196, 1);
 }
 
@@ -104,7 +104,7 @@
 .color-field__label {
   position: relative;
 
-  &::before{
+  &::before {
     width: 36px;
     height: 36px;
     top: -5px;
@@ -115,7 +115,7 @@
     .psevdo-elem();
   }
 
-  &::after{
+  &::after {
     width: 20px;
     height: 8px;
     top: 7px;
@@ -200,7 +200,7 @@
   }
 
   .type-field__label {
-    &::before{
+    &::before {
       width: 20px;
       height: 20px;
       top: -10px;
@@ -234,14 +234,14 @@
   }
 
   .color-field__label {
-    &::before{
+    &::before {
       width: 50px;
       height: 50px;
       top: -10px;
       left: -80px;
     }
 
-    &::after{
+    &::after {
       width: 26px;
       height: 13px;
       left: -67px;
