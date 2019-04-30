@@ -67,7 +67,7 @@
     right: 40px;
     margin-top: -32px;
     background-image: url("../img/icon-interior.svg");
-    .psevdo-elem();
+    .absolute-elem();
   }
 }
 
@@ -81,7 +81,7 @@
     right: 40px;
     margin-top: -32px;
     background-image: url("../img/icon-toy.svg");
-    .psevdo-elem();
+    .absolute-elem();
   }
 }
 
@@ -110,12 +110,13 @@
     }
 
     &::after {
+      .absolute-elem();
       width: 100%;
       height: 13px;
       bottom: 0;
       left: 0;
       background-image: url("../img/bg-zigzag-fill.svg");
-      .psevdo-elem();
+      background-repeat: repeat;
     }
   }
 
@@ -188,7 +189,7 @@
   }
 
   .page-title__item {
-    margin-right: 30px;
+    margin-right: 40px;
   }
 
   .page-title__title {
