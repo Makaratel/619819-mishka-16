@@ -2,9 +2,30 @@
   .list-clean();
 }
 
+.video__item {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  outline: 1px solid rgba(236, 236, 236, 1);
+}
+
 .video__title {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-left: 90px;
+  margin-bottom: 25px;
   font-size: 17px;
   line-height: 24px;
+
+  &::before {
+    width: 40px;
+    height: 25px;
+    top: 5px;
+    left: -55px;
+    background-image: url("../img/icon-video.svg");
+    cursor: pointer;
+    .absolute-elem();
+  }
 }
 
 .video__picture {
@@ -17,22 +38,35 @@
     left: 50%;
     margin-top: -100px;
     margin-left: -50px;
-
     background-image: url("../img/icon-play.svg");
-    cursor: pointer;
-    .psevdo-elem();
+    .absolute-elem();
   }
 }
 
+.video__preview {
+  margin-bottom: -5px;
+}
+
 .video__description {
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 25px;
   font-size: 13px;
   line-height: 24px;
   .text-normal();
 }
 
+.video__button {
+  margin: 0 auto;
+  width: 190px;
+}
+
 @media (min-width: @tablet-width) {
   .video__item {
+    padding-bottom: 45px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
   }
 
@@ -41,11 +75,32 @@
     order: 1;
   }
 
+  .video__title {
+    margin-left: 105px;
+    margin-bottom: 30px;
+
+    &::before {
+      top: -5px;
+    }
+  }
+
+  .video__description {
+    margin-top: 0;
+    margin-bottom: 35px;
+  }
+
+  .video__picture::after {
+    margin-top: -50px;
+  }
+
   .video__preview {
-    width: 670px;
+    margin-top: -10px;
+    margin-bottom: 35px;
+    width: 668px;
     height: 460px;
   }
 
+  .video__wrapper,
   .video__button {
     width: 580px;
     margin: 0 auto;
@@ -54,7 +109,20 @@
 
 @media (min-width: @desktop-width) {
   .video__item {
-    flex-direction: row;
+    height: 450px;
+    padding-bottom: 0;
+  }
+
+  .video__title {
+    margin-top: 85px;
+    margin-left: 70px;
+    margin-bottom: 35px;
+    width: 200px;
+
+    &::before {
+      top: -50px;
+      left: 0;
+    }
   }
 
   .video__preview {
@@ -62,7 +130,13 @@
   }
 
   .video__wrapper {
-    width: 500px;
+    width: calc(100% - 680px);
+  }
+
+  .video__description {
+    margin: 0 auto;
+    margin-bottom: 35px;
+    width: 230px;
   }
 
   .video__button {

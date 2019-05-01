@@ -15,33 +15,34 @@
             <img class="main-nav__image" src="img/logo-mobile.svg" width="120" height="80" alt="Mishka">
           </picture>
         </a>
-        <button class="main-nav__button menu-button" type="button" aria-label="Меню"></button>
+        <button class="main-nav__button menu-button menu-button--open" type="button" aria-label="Меню"></button>
 
-        <ul class="main-nav__list main-nav__list--links">
-          <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="form.html">Вязание на заказ</a></li>
+        <ul class="main-nav__list main-nav__list--links main-nav__list--open">
+          <li class="main-nav__item main-nav__item--catalog"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
+          <li class="main-nav__item main-nav__item--offer"><a class="main-nav__link" href="form.html">Вязание на заказ</a></li>
         </ul>
 
-        <ul class="main-nav__list main-nav__list--user">
-          <li class="main-nav__item"><a class="main-nav__link search-link" href="#">Поиск по сайту</a></li>
-          <li class="main-nav__item"><a class="main-nav__link cart" href="#">Корзина: <span class="cart__span">пока пуста</span></a></li>
+        <ul class="main-nav__list main-nav__list--user main-nav__list--open">
+          <li class="main-nav__item main-nav__item--search">
+            <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
+          </li>
+          <li class="main-nav__item main-nav__item--cart">
+            <a class="main-nav__link main-nav__link--cart" href="#">Корзина: <span class="cart__span">пока пуста</span></a>
+          </li>
         </ul>
-
-        <form class="main-nav__form" action="https://echo.htmlacademy.ru" method="get">
-          <input class="main-nav__input" type="search" name="line-search" id="line-search">
-        </form>
       </nav>
     </header>
 
     <main>
-      <div class="page__wrapper page-title page-title--extra">
+      <div class="main-page__wrapper page-title page-title--extra">
         <div class="container">
-          <ul class="page-title__list sale">
-            <li class="sale__item"><a class="sale__link" href="#">Новые поступления</a></li>
-            <li class="sale__item"><a class="sale__link" href="#">Рспродажа</a></li>
-          </ul>
-
-          <p class="page-title__text">Бесплатная доставка по России</p>
+          <div class="page-title__wrapper">
+            <ul class="page-title__list">
+              <li class="page-title__item"><a class="page-title__link" href="#">Новые поступления</a></li>
+              <li class="page-title__item"><a class="page-title__link" href="#">Распродажа</a></li>
+            </ul>
+            <p class="page-title__text">Бесплатная доставка по России</p>
+          </div>
           <h1 class="page-title__title">Каталог товаров</h1>
         </div>
       </div>
@@ -57,14 +58,14 @@
             </picture>
 
             <div class="goods__wrapper goods-description">
-              <div class="goods-description__wrapper">
+              <div class="goods-description__wrapper goods-description__wrapper--body">
                 <h3 class="goods-description__title">Зайчик-попрыгайчик</h3>
                 <p class="goods-description__text">Рост 30 см, вес 200 г</p>
               </div>
 
-              <div class="goods-description__wrapper">
+              <div class="goods-description__wrapper goods-description__wrapper--options">
                 <span class="goods-description__price">1 200 руб.</span>
-                <button class="goods-description__button" type="button">Добавить в корзину</button>
+                <button class="goods-description__button" type="button" aria-label="Добавить в корзину"></button>
               </div>
             </div>
           </a></li>
@@ -77,14 +78,14 @@
             </picture>
 
             <div class="goods__wrapper goods-description">
-              <div class="goods-description__wrapper">
+              <div class="goods-description__wrapper goods-description__wrapper--body">
                 <h3 class="goods-description__title">Корзинка для белья</h3>
                 <p class="goods-description__text">Диаметр 15 см, высота 10 см</p>
               </div>
 
-              <div class="goods-description__wrapper">
-                <span class="goods__price">690 руб.</span>
-                <button class="goods__button" type="button">Добавить в корзину</button>
+              <div class="goods-description__wrapper goods-description__wrapper--options">
+                <span class="goods-description__price">690 руб.</span>
+                <button class="goods-description__button" type="button" aria-label="Добавить в корзину"></button>
               </div>
             </div>
           </a></li>
@@ -97,14 +98,14 @@
             </picture>
 
             <div class="goods__wrapper goods-description">
-              <div class="goods-description__wrapper">
+              <div class="goods-description__wrapper goods-description__wrapper--body">
                 <h3 class="goods-description__title">Большая корзинка для игрушек</h3>
                 <p class="goods-description__text">Диаметр 30 см, высота 30 см</p>
               </div>
 
-              <div class="goods-description__wrapper">
-                <span class="goods__price">1 500 руб.</span>
-                <button class="goods__button" type="button">Добавить в корзину</button>
+              <div class="goods-description__wrapper goods-description__wrapper--options">
+                <span class="goods-description__price">1 500 руб.</span>
+                <button class="goods-description__button" type="button" aria-label="Добавить в корзину"></button>
               </div>
             </div>
           </a></li>
@@ -146,5 +147,6 @@
         </div>
       </div>
     </footer>
+    <script type="text/javascript" charset="utf-8" src="js/page-header.js"></script>
   </body>
 </html>
