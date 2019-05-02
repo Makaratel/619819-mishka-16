@@ -46,6 +46,10 @@
     background-repeat: no-repeat;
     background-position: 0% 0%;
 
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
+
     &::after {
       height: 17px;
       bottom: -85px;
@@ -102,6 +106,10 @@
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0% 0%;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   .feedbacks__title {
