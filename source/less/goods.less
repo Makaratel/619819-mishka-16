@@ -6,6 +6,14 @@
   margin-bottom: 30px;
   padding-bottom: 25px;
   outline: 1px solid rgba(236, 236, 236, 1);
+
+  &:hover {
+    box-shadow: 0 5px 10px 1px rgba(236, 236, 236, 1);
+  }
+
+  &:active {
+    box-shadow: 0 5px 4px 1px rgba(236, 236, 236, 1);
+  }
 }
 
 .goods-description__wrapper {
@@ -34,6 +42,14 @@
   margin-top: 20px;
   font-size: 17px;
   line-height: 24px;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .goods-description__text {
@@ -51,9 +67,19 @@
   height: 25px;
   border: none;
   background-color: transparent;
-  background-image: url("../img/icon-cart.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  color: rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    color: rgba(138, 221, 204, 1);
+  }
+
+  &:active {
+    color: rgba(138, 221, 204, 0.3);
+  }
+}
+
+.goods-description__button svg {
+  margin-left: -3px;
 }
 
 @media (min-width: @tablet-width) {
@@ -92,6 +118,10 @@
   .goods-description__wrapper {
     &--options {
       margin-bottom: 25px;
+
+      &::before {
+        width: 270px;
+      }
     }
   }
 
@@ -118,6 +148,10 @@
 
   .goods-description__wrapper {
     width: 287px;
+
+    &--options::before {
+      width: 250px;
+    }
   }
 
   .goods-description__text {
