@@ -6,6 +6,14 @@
   padding-top: 10px;
   padding-bottom: 30px;
   outline: 1px solid rgba(236, 236, 236, 1);
+
+  &:hover {
+    box-shadow: 0 5px 10px 1px rgba(236, 236, 236, 1);
+  }
+
+  &:active {
+    box-shadow: 0 5px 4px 1px rgba(236, 236, 236, 1);
+  }
 }
 
 .video__title {
@@ -32,6 +40,7 @@
   position: relative;
 
   &::after {
+    .absolute-elem();
     width: 100px;
     height: 75px;
     top: 50%;
@@ -39,7 +48,16 @@
     margin-top: -100px;
     margin-left: -50px;
     background-image: url("../img/icon-play.svg");
-    .absolute-elem();
+    cursor: pointer;
+  }
+
+  &:hover::after {
+    transform: scale(1.2);
+  }
+
+  &:active::after {
+    transform: scale(0.8);
+    opacity: 0.7;
   }
 }
 

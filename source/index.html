@@ -24,10 +24,16 @@
 
         <ul class="main-nav__list main-nav__list--user main-nav__list--open">
           <li class="main-nav__item main-nav__item--search">
-            <a class="main-nav__link main-nav__link--search" href="#">Поиск по сайту</a>
+            <a class="main-nav__link main-nav__link--search" href="#">
+              <span class="main-nav__icon main-nav__icon--search"><svg width="20" height="20"><use xlink:href="img/sprite.svg#icon-search"></use></svg></span>
+              Поиск по сайту
+            </a>
           </li>
           <li class="main-nav__item main-nav__item--cart">
-            <a class="main-nav__link main-nav__link--cart" href="#">Корзина: <span class="cart__span">пока пуста</span></a>
+            <a class="main-nav__link main-nav__link--cart" href="#">
+              <span class="main-nav__icon main-nav__icon--cart"><svg width="20" height="20"><use xlink:href="img/sprite.svg#icon-cart"></use></svg></span>
+              Корзина: <span class="main-nav__span">пока пуста</span>
+            </a>
           </li>
         </ul>
       </nav>
@@ -77,6 +83,10 @@
               </table>
 
               <picture class="popular-good__picture">
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x" width="525" height="630">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x" width="335" height="400">
+                <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x" width="335" height="400">
+
                 <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x" width="525" height="630">
                 <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x" width="335" height="400">
                 <img class="popular-good__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Наши вязаные корзинки">
@@ -127,7 +137,7 @@
           <table class="contacts__table">
             <tr class="contacts__row">
               <td class="contacts__cell">e-mail:</td>
-              <td class="contacts__cell contacts__cell--mail">info@mimimishkashop.ru</td>
+              <td class="contacts__cell contacts__cell--mail"><a class="contacts__mail" href="#">info@mimimishkashop.ru</a></td>
             </tr>
 
             <tr class="contacts__row">
@@ -139,6 +149,10 @@
 
         <a class="contacts__link" href="#">
           <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x" width="525" height="630">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x" width="768" height="400">
+            <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x" width="768" height="400">
+
             <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x" width="525" height="630">
             <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x" width="768" height="400">
             <img class="contacts__map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="322" height="457" alt="Наше расположение на карте">
@@ -152,18 +166,25 @@
     </main>
 
     <footer class="footer">
-      <div class="container">
-        <a class="footer__logo" href="index.html"><img class="footer__image logo" src="img/logo-mobile.svg" width="100" height="40" alt="Mishka"></a>
+      <div class="footer__wrapper container">
+        <a class="footer__logo" href="index.html">
+          <svg width="100" height="40" alt="Mishka"><use xlink:href="img/sprite.svg#icon-logo"></use></svg>
+        </a>
         <ul class="footer__list">
-          <li class="footer__item"><a class="footer__link footer__link--insta" href="#" aria-label="наш профиль в Инстаграм"></a></li>
-          <li class="footer__item"><a class="footer__link footer__link--fb" href="#" aria-label="наш профиль на Фейсбуке"></a></li>
-          <li class="footer__item"><a class="footer__link footer__link--twit" href="#" aria-label="наш профиль в Твиттере"></a></li>
+          <li class="footer__item"><a class="footer__link footer__link--insta" href="#">
+            <svg width="25" height="28" alt="Наш профиль в Инстаграм"><use xlink:href="img/sprite.svg#icon-insta"></use></svg>
+          </a></li>
+          <li class="footer__item"><a class="footer__link footer__link--fb" href="#">
+            <svg width="25" height="28" alt="Наш профиль на Фейсбуке"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
+          </a></li>
+          <li class="footer__item"><a class="footer__link footer__link--twit" href="#">
+            <svg width="25" height="28" alt="Наш профиль в Твиттере"><use xlink:href="img/sprite.svg#icon-twit"></use></svg>
+          </a></li>
         </ul>
 
-        <div class="footer__wrapper">
-          <span class="footer__span">Разработано</span>
-          <a class="footer__link" href="https://htmlacademy.ru/"><img class="footer__image" src="img/htmlacademy.svg" width="30" height="35" alt="HTML Academy"></a>
-        </div>
+        <a class="footer__academy" href="https://htmlacademy.ru/">
+          Разработано<span class="footer__span"><svg width="30" height="35" alt="HTML Academy"><use xlink:href="img/sprite.svg#icon-academy"></use></svg></span>
+        </a>
       </div>
     </footer>
     <script type="text/javascript" charset="utf-8" src="js/page-header.js"></script>

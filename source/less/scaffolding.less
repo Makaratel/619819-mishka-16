@@ -57,6 +57,15 @@ a {
   text-align: center;
   border: 2px solid rgba(0, 0, 0, 1);
   .text-bold();
+
+  &:hover {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 1);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
