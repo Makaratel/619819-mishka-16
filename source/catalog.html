@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style-min.css">
   </head>
   <body>
     <header class="page-header">
@@ -140,7 +140,10 @@
         <h2 class="visually-hidden">Наши видеозаписи</h2>
         <ul class="video__list">
           <li class="video__item">
-            <h3 class="video__title">Процесс производства</h3>
+            <h3 class="video__title">
+              <span class="video__icon"><svg width="40" height="25"><use xlink:href="img/sprite.svg#icon-video"></use></svg></span>
+              Процесс производства
+            </h3>
             <picture class="video__picture">
               <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
