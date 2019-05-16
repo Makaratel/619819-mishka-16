@@ -89,11 +89,13 @@
   }
 
   .popular-good__wrapper {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: flex-end;
     align-content: space-between;
+    min-height: 475px;
     max-height: 520px;
   }
 
@@ -111,8 +113,9 @@
   }
 
   .popular-good__picture {
-    margin-top: 70px;
-    order: 1;
+    position: absolute;
+    top: 70px;
+    right: 0;
   }
 
   .popular-good__image {
@@ -161,11 +164,16 @@
   }
 
   .popular-good__wrapper {
-    max-height: 531px;
+    min-height: 532px;
+    max-height: 570px;
   }
 
   .popular-good__table {
     margin-bottom: 90px;
+  }
+
+  .popular-good__picture {
+    top: -100px;
   }
 
   .popular-good__image {

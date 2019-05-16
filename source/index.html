@@ -4,8 +4,16 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" type="text/css" href="css/style-min.css">
+    <link rel="preload" href="/fonts/opensans.woff2" as="font">
+    <link rel="preload" href="/fonts/opensansbold.woff2" as="font">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
   </head>
   <body>
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
     <header class="page-header">
       <nav class="page-header__nav main-nav container">
         <a class="main-nav__logo" href="index.html">
@@ -25,13 +33,13 @@
         <ul class="main-nav__list main-nav__list--user main-nav__list--open">
           <li class="main-nav__item main-nav__item--search">
             <a class="main-nav__link main-nav__link--search" href="#">
-              <span class="main-nav__icon main-nav__icon--search"><svg width="20" height="20"><use xlink:href="img/sprite.svg#icon-search"></use></svg></span>
+              <span class="main-nav__icon main-nav__icon--search"><svg width="20" height="20"><use xlink:href="#icon-search"></use></svg></span>
               Поиск по сайту
             </a>
           </li>
           <li class="main-nav__item main-nav__item--cart">
             <a class="main-nav__link main-nav__link--cart" href="#">
-              <span class="main-nav__icon main-nav__icon--cart"><svg width="20" height="20"><use xlink:href="img/sprite.svg#icon-cart"></use></svg></span>
+              <span class="main-nav__icon main-nav__icon--cart"><svg width="20" height="20"><use xlink:href="#icon-cart"></use></svg></span>
               Корзина: <span class="main-nav__span">пока пуста</span>
             </a>
           </li>
@@ -43,16 +51,16 @@
       <div class="main-page__wrapper page-title page-title--index">
         <div class="container">
           <div class="page-title__wrapper">
-            <ul class="page-title__list">
+            <ul class="page-title__list page-title__list--sale">
               <li class="page-title__item"><a class="page-title__link" href="#">Новые поступления</a></li>
               <li class="page-title__item"><a class="page-title__link" href="#">Распродажа</a></li>
             </ul>
             <p class="page-title__text">Бесплатная доставка по России</p>
           </div>
           <h1 class="page-title__title">Милые штуки ручной работы для дома</h1>
-          <ul class="page-title__list catalog-menu">
-            <li class="catalog-menu__item catalog-menu__item--interier"><a class="catalog-menu__link" href="#">Предметы интерьера</a></li>
-            <li class="catalog-menu__item catalog-menu__item--toys"><a class="catalog-menu__link" href="#">Детские игрушки</a></li>
+          <ul class="page-title__list page-title__list--catalog">
+            <li class="page-title__item page-title__item--interier"><a class="page-title__link" href="#">Предметы интерьера</a></li>
+            <li class="page-title__item page-title__item--toys"><a class="page-title__link" href="#">Детские игрушки</a></li>
           </ul>
         </div>
       </div>
@@ -67,28 +75,28 @@
               <p class="popular-good__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
               <table class="popular-good__table">
                 <tr class="popular-good__row">
-                  <th class="popular-good__cell popular-good__cell--title">Цвет:</td>
+                  <th class="popular-good__cell popular-good__cell--title">Цвет:</th>
                   <td class="popular-good__cell">"Тиффани"/серый</td>
                 </tr>
 
                 <tr class="popular-good__row">
-                  <th class="popular-good__cell popular-good__cell--title">Диаметр:</td>
+                  <th class="popular-good__cell popular-good__cell--title">Диаметр:</th>
                   <td class="popular-good__cell">25 см</td>
                 </tr>
 
                 <tr class="popular-good__row">
-                  <th class="popular-good__cell popular-good__cell--title">Высота:</td>
+                  <th class="popular-good__cell popular-good__cell--title">Высота:</th>
                   <td class="popular-good__cell">15 см</td>
                 </tr>
               </table>
 
               <picture class="popular-good__picture">
-                <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x" width="525" height="630">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x" width="335" height="400">
-                <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x" width="335" height="400">
+                <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
 
-                <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x" width="525" height="630">
-                <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x" width="335" height="400">
+                <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
                 <img class="popular-good__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Наши вязаные корзинки">
               </picture>
               <p class="popular-good__price">Цена: 990 руб.</p>
@@ -101,12 +109,30 @@
       <section class="about-us container">
         <h2 class="about-us__title">Коротко о нас:</h2>
         <ul class="about-us__list">
-          <li class="about-us__item about-us__item--flower">Экологически чистые материалы</li>
-          <li class="about-us__item about-us__item--money">Скандинавский стиль по российской цене</li>
-          <li class="about-us__item about-us__item--heart">Увеличивает лайки на фотографиях</li>
-          <li class="about-us__item about-us__item--ball">Связано вручную с любовью и умилением</li>
-          <li class="about-us__item about-us__item--rocket">Поддержка отечественного производителя</li>
-          <li class="about-us__item about-us__item--gift">Поставляется в подарочной упаковке</li>
+          <li class="about-us__item about-us__item--flower">
+            <span class="about-us__icon"><svg width="50" height="35"><use xlink:href="#icon-feature-flower"></use></svg></span>
+            Экологически чистые материалы
+          </li>
+          <li class="about-us__item about-us__item--money">
+            <span class="about-us__icon"><svg width="50" height="35"><use xlink:href="#icon-feature-money"></use></svg></span>
+            Скандинавский стиль по российской цене
+          </li>
+          <li class="about-us__item about-us__item--heart">
+            <span class="about-us__icon"><svg width="50" height="35"><use xlink:href="#icon-feature-heart"></use></svg></span>
+            Увеличивает лайки на фотографиях
+          </li>
+          <li class="about-us__item about-us__item--ball">
+            <span class="about-us__icon"><svg width="50" height="35"><use xlink:href="#icon-feature-ball"></use></svg></span>
+            Связано вручную с любовью и умилением
+          </li>
+          <li class="about-us__item about-us__item--rocket">
+            <span class="about-us__icon"><svg width="50" height="35"><use xlink:href="#icon-feature-rocket"></use></svg></span>
+            Поддержка отечественного производителя
+          </li>
+          <li class="about-us__item about-us__item--gift">
+            <span class="about-us__icon"><svg width="50" height="35"><use xlink:href="#icon-feature-gift"></use></svg></span>
+            Поставляется в подарочной упаковке
+          </li>
         </ul>
       </section>
 
@@ -147,7 +173,7 @@
           </table>
         </div>
 
-        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413.2382632293593!2d30.322596711586574!3d59.93843554891889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca640933%3A0x8403eb878242dbd5!2z0JTQvtGF0L7QtNC90YvQuSDQtNC-0Lwg0J0uINCQLiDQnNC10LvRjNGG0LXRgNCw!5e0!3m2!1sru!2sru!4v1557257286759!5m2!1sru!2sru" width="322" height="457" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413.2382632293593!2d30.322596711586574!3d59.93843554891889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca640933%3A0x8403eb878242dbd5!2z0JTQvtGF0L7QtNC90YvQuSDQtNC-0Lwg0J0uINCQLiDQnNC10LvRjNGG0LXRgNCw!5e0!3m2!1sru!2sru!4v1557257286759!5m2!1sru!2sru" width="322" height="457" style="border:0" allowfullscreen></iframe>
 
         <div class="contacts__wrapper container">
           <a class="contacts__button button" href="#">Напишите нам</a>
@@ -158,25 +184,28 @@
     <footer class="footer">
       <div class="footer__wrapper container">
         <a class="footer__logo" href="index.html">
-          <svg width="100" height="40" alt="Mishka"><use xlink:href="img/sprite.svg#icon-logo"></use></svg>
+          <svg class="footer__icon--logo" width="100" height="40" aria-label="Mishka"><use xlink:href="#icon-logo-footer"></use></svg>
         </a>
         <ul class="footer__list">
-          <li class="footer__item"><a class="footer__link footer__link--insta" href="#">
-            <svg width="25" height="28" alt="Наш профиль в Инстаграм"><use xlink:href="img/sprite.svg#icon-insta"></use></svg>
+          <li class="footer__item"><a class="footer__link" href="#">
+            <svg class="footer__icon" width="25" height="28" aria-label="Наш профиль в Инстаграм"><use xlink:href="#icon-insta"></use></svg>
           </a></li>
-          <li class="footer__item"><a class="footer__link footer__link--fb" href="#">
-            <svg width="25" height="28" alt="Наш профиль на Фейсбуке"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
+          <li class="footer__item"><a class="footer__link" href="#">
+            <svg class="footer__icon" width="25" height="28" aria-label="Наш профиль на Фейсбуке"><use xlink:href="#icon-fb"></use></svg>
           </a></li>
-          <li class="footer__item"><a class="footer__link footer__link--twit" href="#">
-            <svg width="25" height="28" alt="Наш профиль в Твиттере"><use xlink:href="img/sprite.svg#icon-twit"></use></svg>
+          <li class="footer__item"><a class="footer__link" href="#">
+            <svg class="footer__icon" width="25" height="28" aria-label="Наш профиль в Твиттере"><use xlink:href="#icon-twitter"></use></svg>
           </a></li>
         </ul>
 
         <a class="footer__academy" href="https://htmlacademy.ru/">
-          Разработано<span class="footer__span"><svg width="30" height="35" alt="HTML Academy"><use xlink:href="img/sprite.svg#icon-academy"></use></svg></span>
+          Разработано<span class="footer__span"><svg width="30" height="35" aria-label="HTML Academy"><use xlink:href="#icon-logo-htmlacademy"></use></svg></span>
         </a>
       </div>
     </footer>
-    <script type="text/javascript" charset="utf-8" src="js/page-header.js"></script>
+    <script src="js/page-header.js"></script>
+    <script src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js" async>
+      document.createElement( "picture" );
+    </script>
   </body>
 </html>

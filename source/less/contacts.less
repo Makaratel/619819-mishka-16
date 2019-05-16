@@ -46,6 +46,10 @@
   height: 457px;
 }
 
+.contacts__button {
+  width: 100%;
+}
+
 @media (min-width: @tablet-width) {
   .contacts__wrapper:first-child {
     position: relative;
@@ -100,16 +104,20 @@
 @media (min-width: @desktop-width) {
   .contacts {
     position: relative;
-    max-height: 460px;
+    margin: 0 auto;
+    width: 1050px;
+    height: 460px;
+    max-height: 500px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    justify-content: flex-end;
     align-content: space-between;
   }
 
   .contacts__wrapper {
     margin-left: 185px;
-    width: auto;
+    width: 330px;
 
     &:first-child::after {
       top: 20px;
@@ -123,10 +131,14 @@
   }
 
   .contacts__map {
-    margin-right: 50px;
+    margin-bottom: 0px;
     min-width: auto;
     width: 50%;
-    height: 630px;
+    height: 455px;
     order: 2;
+  }
+
+  .contacts__button {
+    margin-left: 0;
   }
 }

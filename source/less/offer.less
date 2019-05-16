@@ -36,6 +36,8 @@
   margin: 0;
   padding: 0;
   margin-bottom: 35px;
+  font-size: 17px;
+  line-height: 18px;
   text-transform: uppercase;
   color: rgba(99, 209, 187, 1);
 }
@@ -58,8 +60,8 @@
     border-color: rgba(98, 209, 186, 1);
   }
 
-  &:hover ~ .field-icon {
-    color: rgba(98, 209, 186, 1);
+  &:hover ~ .field-icon svg {
+    fill: rgba(98, 209, 186, 1);
   }
 
   &:focus {
@@ -67,24 +69,28 @@
     outline: none;
   }
 
-  &:focus ~ .field-icon {
-    color: rgba(98, 209, 186, 1);
+  &:focus ~ .field-icon svg {
+    fill: rgba(98, 209, 186, 1);
   }
 }
 
-.field-input::-webkit-input-placeholder {
+.field-input::-webkit-input-placeholder,
+.extra-field__area::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.field-input::-moz-placeholder {
+.field-input::-moz-placeholder,
+.extra-field__area::-moz-placeholder {
   color: rgba(0, 0, 0, 0.4);
 }/* Firefox 19+ */
 
-.field-input:-moz-placeholder {
+.field-input:-moz-placeholder,
+.extra-field__area:-moz-placeholder {
   color: rgba(0, 0, 0, 0.4);
 }/* Firefox 18- */
 
-.field-input:-ms-input-placeholder {
+.field-input:-ms-input-placeholder,
+.extra-field__area:-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.4);
 }
 
@@ -115,8 +121,7 @@
     height: 15px;
     top: -5px;
     left: -58px;
-    background-color: rgba(255, 255, 255, 1);
-    border: 10px solid white;
+    border: 10px solid rgba(255, 255, 255, 1);
     border-radius: 50%;
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 1);
     cursor: pointer;
@@ -270,7 +275,7 @@ input[id="toy"]:checked ~ label[for="toy"]::before {
       height: 20px;
       top: -10px;
       left: -78px;
-      border: 13px solid white;
+      border: 13px solid rgba(255, 255, 255, 1);
     }
   }
 
@@ -371,12 +376,16 @@ input[id="toy"]:checked ~ label[for="toy"]::before {
     color: rgba(0, 0, 0, 0.3);
   }
 
+  .field-icon svg {
+    fill: rgba(0, 0, 0, 0.3);
+  }
+
   .tel-field__icon {
-    top: -10px;
+    top: -12px;
   }
 
   .mail-field__icon {
-    top: -20px;
+    top: -23px;
   }
 
   .extra-field {
@@ -402,34 +411,39 @@ input[id="toy"]:checked ~ label[for="toy"]::before {
 
 @media (min-width: @desktop-width) {
   .offer__text,
+  .type-field__list,
   .name-field__list,
   .tel-field__input,
   .mail-field__input,
   .extra-field__area,
   .offer__wrapper {
     width: 700px;
+    box-sizing: border-box;
   }
 
   .field-title {
-    width: 175px;
-    text-align: center;
+    padding-left: 60px;
+    width: 115px;
   }
 
   .color-field {
     height: 225px;
   }
 
+  .color-field__list {
+    width: 800px;
+  }
+
   .color-field__item {
     margin-bottom: 60px;
-    width: 220px;
+    width: 180px;
 
     &:nth-last-child(3) {
       margin-bottom: 0;
     }
   }
 
-  .tel-field__title::after,
-  .mail-field__title::after {
-    left: 835px;
+  .field-icon {
+    right: 190px;
   }
 }

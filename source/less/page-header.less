@@ -26,6 +26,8 @@
 
 .main-nav__image {
   display: flex;
+  width: 120px;
+  height: 80px;
 }
 
 .menu-button {
@@ -82,16 +84,16 @@
     color: rgba(0, 0, 0, 0.6);
   }
 
-  &:hover .main-nav__icon {
-    color: rgba(138, 221, 204, 1);
+  &:hover .main-nav__icon svg{
+    fill: rgba(138, 221, 204, 1);
   }
 
   &:active {
     color: rgba(0, 0, 0, 0.3);
   }
 
-  &:active .main-nav__icon {
-    color: rgba(138, 221, 204, 0.3);
+  &:active .main-nav__icon svg{
+    fill: rgba(138, 221, 204, 0.3);
   }
 }
 
@@ -102,6 +104,10 @@
   top: 30px;
   left: -35px;
   color: rgba(0, 0, 0, 0.2);
+}
+
+.main-nav__icon svg{
+  fill: rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: @tablet-width) {
