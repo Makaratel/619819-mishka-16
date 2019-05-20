@@ -59,50 +59,47 @@
           </div>
           <h1 class="page-title__title">Милые штуки ручной работы для дома</h1>
           <ul class="page-title__list page-title__list--catalog">
-            <li class="page-title__item page-title__item--interier"><a class="page-title__link" href="#">Предметы интерьера</a></li>
-            <li class="page-title__item page-title__item--toys"><a class="page-title__link" href="#">Детские игрушки</a></li>
+            <li class="page-title__item"><a class="page-title__link page-title__link--interier" href="#"><span>Предметы интерьера</span></a></li>
+            <li class="page-title__item"><a class="page-title__link page-title__link--toys" href="#"><span>Детские игрушки</span></a></li>
           </ul>
         </div>
       </div>
 
-      <section class="promo">
+      <section class="popular-good">
         <div class="container">
-          <h2 class="visually-hidden">Товары недели</h2>
-          <section class="promo__section popular-good">
-            <h3 class="popular-good__title">Вязаные корзинки</h3>
-            <span class="popular-good__span">Товар недели</span>
-            <div class="popular-good__wrapper">
-              <p class="popular-good__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-              <table class="popular-good__table">
-                <tr class="popular-good__row">
-                  <th class="popular-good__cell popular-good__cell--title">Цвет:</th>
-                  <td class="popular-good__cell">"Тиффани"/серый</td>
-                </tr>
+          <h2 class="popular-good__title">Вязаные корзинки</h2>
+          <span class="popular-good__span">Товар недели</span>
+          <div class="popular-good__wrapper">
+            <p class="popular-good__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+            <table class="popular-good__table">
+              <tr class="popular-good__row">
+                <th class="popular-good__cell popular-good__cell--title">Цвет:</th>
+                <td class="popular-good__cell">"Тиффани"/серый</td>
+              </tr>
 
-                <tr class="popular-good__row">
-                  <th class="popular-good__cell popular-good__cell--title">Диаметр:</th>
-                  <td class="popular-good__cell">25 см</td>
-                </tr>
+              <tr class="popular-good__row">
+                <th class="popular-good__cell popular-good__cell--title">Диаметр:</th>
+                <td class="popular-good__cell">25 см</td>
+              </tr>
 
-                <tr class="popular-good__row">
-                  <th class="popular-good__cell popular-good__cell--title">Высота:</th>
-                  <td class="popular-good__cell">15 см</td>
-                </tr>
-              </table>
+              <tr class="popular-good__row">
+                <th class="popular-good__cell popular-good__cell--title">Высота:</th>
+                <td class="popular-good__cell">15 см</td>
+              </tr>
+            </table>
 
-              <picture class="popular-good__picture">
-                <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
+            <picture class="popular-good__picture">
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
 
-                <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-                <img class="popular-good__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Наши вязаные корзинки">
-              </picture>
-              <p class="popular-good__price">Цена: 990 руб.</p>
-              <a class="popular-good__button button" href="#">Заказать</a>
-            </div>
-          </section>
+              <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+              <img class="popular-good__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Наши вязаные корзинки">
+            </picture>
+            <p class="popular-good__price">Цена: 990 руб.</p>
+            <a class="popular-good__button button" href="#">Заказать</a>
+          </div>
         </div>
       </section>
 
@@ -203,7 +200,34 @@
         </a>
       </div>
     </footer>
-    <script src="js/page-header.js"></script>
+
+    <div class="modal-size modal-size--overlay">
+      <section class="modal-size__section">
+        <h2 class="modal-size__title">Добавить в корзину</h2>
+        <p class="modal-size__text">Выберите размер:</p>
+        <form class="modal-size__form" action="https://echo.htmlacademy.ru" method="post">
+          <ul class="modal-size__list">
+            <li class="modal-size__item">
+              <input class="modal-size__input" type="radio" name="size" id="S" checked>
+              <label class="modal-size__label" for="S">S</label>
+            </li>
+
+            <li class="modal-size__item">
+              <input class="modal-size__input" type="radio" name="size" id="M">
+              <label class="modal-size__label" for="M">M</label>
+            </li>
+
+            <li class="modal-size__item">
+              <input class="modal-size__input" type="radio" name="size" id="L">
+              <label class="modal-size__label" for="L">L</label>
+            </li>
+          </ul>
+          <button class="modal-size__button" type="submit">Добавить</button>
+        </form>
+      </section>
+    </div>
+
+    <script src="js/script.js"></script>
     <script src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js" async>
       document.createElement( "picture" );
     </script>
