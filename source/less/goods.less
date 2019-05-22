@@ -1,9 +1,13 @@
+.goods {
+  margin-bottom: 35px;
+}
+
 .goods__list {
   .list-clean();
 }
 
 .goods__item {
-  margin-bottom: 30px;
+  margin-bottom: 33px;
   padding-bottom: 25px;
   outline: 1px solid rgba(236, 236, 236, 1);
 
@@ -13,6 +17,10 @@
 
   &:active {
     box-shadow: 0 5px 4px 1px rgba(236, 236, 236, 1);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -39,7 +47,9 @@
 .goods-description__title {
   margin: 0;
   padding: 0;
-  margin-top: 20px;
+  margin-top: 22px;
+  margin-bottom: 5px;
+  width: 200px;
   font-size: 17px;
   line-height: 24px;
 
@@ -55,7 +65,7 @@
 .goods-description__text {
   margin: 0;
   padding: 0;
-  margin-bottom: 40px;
+  margin-bottom: 41px;
   font-size: 13px;
   line-height: 30px;
   .text-normal();
@@ -64,6 +74,7 @@
 .goods-description__price {
   margin: 0;
   padding: 0;
+  line-height: 24px;
 }
 
 .goods-description__button {
@@ -91,8 +102,12 @@
 }
 
 @media (min-width: @tablet-width) {
+  .goods {
+    margin-bottom: 53px;
+  }
+
   .goods__item {
-    margin-bottom: 55px;
+    margin-bottom: 52px;
     padding-bottom: 0;
   }
 
@@ -111,6 +126,24 @@
     flex-direction: column;
     justify-content: space-between;
   }
+
+  .goods-description__title {
+    width: 240px;
+    font-size: 20px;
+  }
+
+  .goods-description__text {
+    font-size: 15px;
+  }
+
+  .goods-description__price {
+    margin-left: 2px;
+    font-size: 17px;
+  }
+
+  .goods-description__button {
+    right: 30px;
+  }
 }
 
 @media (min-width: @tablet-width) and (max-width: @desktop-width) {
@@ -125,7 +158,7 @@
 
   .goods-description__wrapper {
     &--options {
-      margin-bottom: 25px;
+      margin-bottom: 28px;
 
       &::before {
         width: 270px;
@@ -139,6 +172,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .goods {
+    margin-bottom: 57px;
+  }
+
   .goods__list {
     display: flex;
     flex-direction: row;
@@ -146,12 +183,13 @@
   }
 
   .goods__item {
-    width: 315px;
+    margin-bottom: 0;
     padding-bottom: 25px;
+    width: 315px;
   }
 
   .goods__wrapper {
-    min-height: 175px;
+    min-height: 170px;
   }
 
   .goods__image {
@@ -165,5 +203,9 @@
     &--options::before {
       width: 250px;
     }
+  }
+
+  .goods-description__price {
+    margin-left: -1px;
   }
 }

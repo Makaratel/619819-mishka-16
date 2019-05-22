@@ -7,7 +7,7 @@
 .controls__button {
   width: 130px;
   height: 50px;
-  border: 2px solid rgba(236, 236, 236, 1);
+  border: 1px solid rgba(236, 236, 236, 1);
   background-color: transparent;
   color: transparent;
 
@@ -35,12 +35,18 @@
 @media (min-width: @tablet-width) {
   .controls {
     position: absolute;
-    right: 0;
-    bottom: 15px;
+    right: 3px;
+    bottom: 13px;
   }
 
   .controls__button {
     width: 85px;
     border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .controls {
+    bottom: 60px;
   }
 }
