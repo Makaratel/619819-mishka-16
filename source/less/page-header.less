@@ -26,6 +26,8 @@
 
 .main-nav__image {
   display: flex;
+  width: 90px;
+  height: 80px;
 }
 
 .menu-button {
@@ -82,16 +84,16 @@
     color: rgba(0, 0, 0, 0.6);
   }
 
-  &:hover .main-nav__icon {
-    color: rgba(138, 221, 204, 1);
+  &:hover .main-nav__icon svg{
+    fill: rgba(138, 221, 204, 1);
   }
 
   &:active {
     color: rgba(0, 0, 0, 0.3);
   }
 
-  &:active .main-nav__icon {
-    color: rgba(138, 221, 204, 0.3);
+  &:active .main-nav__icon svg{
+    fill: rgba(138, 221, 204, 0.3);
   }
 }
 
@@ -104,6 +106,10 @@
   color: rgba(0, 0, 0, 0.2);
 }
 
+.main-nav__icon svg{
+  fill: rgba(0, 0, 0, 0.2);
+}
+
 @media (min-width: @tablet-width) {
   .main-nav {
     display: flex;
@@ -113,7 +119,7 @@
   }
 
   .main-nav__image {
-    height: 90px;
+    width: 110px;
   }
 
   .menu-button {
@@ -122,15 +128,14 @@
 
   .main-nav__item {
     border-top: none;
-    height: 90px;
+    height: 87px;
 
     &--search {
       border-left: 1px solid rgba(236, 236, 236, 1);
     }
 
     &--cart {
-      width: 270px;
-
+      width: 266px;
       border-left: 1px solid rgba(236, 236, 236, 1);
     }
   }
@@ -142,7 +147,7 @@
     &--search {
       margin: 0;
       padding: 0;
-      width: 85px;
+      width: 82px;
       font-size: 0;
     }
 
@@ -155,11 +160,11 @@
     top: 35px;
 
     &--search {
-      left: 35px;
+      left: 32px;
     }
 
     &--cart {
-      left: 40px;
+      left: 30px;
     }
   }
 }
@@ -169,14 +174,14 @@
     position: absolute;
     z-index: 2;
     left: 0;
-    bottom: -61px;
+    bottom: -60px;
     display: flex;
     flex-wrap: wrap;
     font-size: 15px;
   }
 
   .main-nav__list--links .main-nav__item {
-    margin-right: 30px;
+    margin-right: 34px;
     height: 60px;
   }
 
@@ -197,6 +202,12 @@
 
   .main-nav__logo {
     order: 2;
+    margin-left: -28px;
+  }
+
+  .main-nav__image {
+    width: 150px;
+    height: 85px;
   }
 
   .main-nav__list {
@@ -212,11 +223,11 @@
     border-right: 1px solid rgba(236, 236, 236, 1);
 
     &--catalog {
-      padding-right: 25px;
+      padding-right: 35px;
     }
 
     &--offer {
-      padding-left: 25px;
+      padding-left: 35px;
       border-right: none;
     }
   }

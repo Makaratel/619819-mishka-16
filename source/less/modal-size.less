@@ -1,0 +1,144 @@
+.modal-size {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  background-color: rgba(255, 255, 255, 0.9);
+
+  &--open {
+    display: block;
+  }
+}
+
+.modal-size__section {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  top: 50%;
+  width: 100%;
+  height: 300px;
+  margin-top: -170px;
+  padding-top: 30px;
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(198, 198, 198, 1);
+  box-shadow: 0 5px 10px 1px rgba(198, 198, 198, 1);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.modal-size__title {
+  margin: 0;
+  padding: 0;
+  width: 150px;
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
+  .text-bold();
+}
+
+.modal-size__text {
+  font-size: 17px;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 1);
+  .text-normal();
+}
+
+.modal-size__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.modal-size__list {
+  .list-clean();
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+  margin-bottom: 30px;
+}
+
+.modal-size__input {
+  display: none;
+
+  &:checked ~ .modal-size__label {
+    border: 2px solid rgba(99, 209, 187, 1);
+  }
+}
+
+.modal-size__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 78px;
+  height: 48px;
+  border: 2px solid rgba(236, 236, 236, 1);
+  font-size: 17px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 1);
+  cursor: pointer;
+  .text-bold();
+
+  &:hover {
+    border-color: rgba(199, 199, 199, 1);
+  }
+}
+
+.modal-size__button {
+  width: 260px;
+  height: 50px;
+  font-size: 17px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(9, 209, 187, 1);
+  border: none;
+  .text-bold();
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .modal-size__section {
+    width: auto;
+    left: 50%;
+    margin-left: -285px;
+    padding-left: 108px;
+    padding-right: 108px;
+  }
+
+  .modal-size__title {
+    width: auto;
+    font-size: 30px;
+    line-height: 57px;
+  }
+
+  .modal-size__text {
+    font-size: 15px;
+  }
+
+  .modal-size__list {
+    width: 100%;
+  }
+
+  .modal-size__label {
+    width: 108px;
+  }
+
+  .modal-size__button {
+    width: 100%;
+  }
+}

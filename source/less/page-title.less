@@ -1,13 +1,13 @@
 .page-title {
   position: relative;
-  background-color: rgba(249, 249, 249, 1);
 
   &--index {
-    margin-bottom: 20px;
+    margin-bottom: 32px;
     background-image: url("../img/hero-mobile@1x.jpg");
     background-repeat: no-repeat;
-    background-position: 50% 0;
+    background-position: 50% -18%;
     background-size: 575px auto;
+    background-color: rgba(249, 249, 249, 1);
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/hero-mobile@2x.jpg");
@@ -20,6 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(241, 241, 241, 1);
   }
 }
 
@@ -28,8 +29,15 @@
 }
 
 .page-title__list {
-  display: none;
   .list-clean();
+
+  &--sale {
+    display: none;
+  }
+
+  &--catalog {
+    display: block;
+  }
 }
 
 .page-title__text {
@@ -44,21 +52,39 @@
 }
 
 .page-title--index .page-title__title {
-  padding-top: 60px;
-  margin-bottom: 140px;
+  padding-top: 68px;
+  margin-bottom: 123px;
 }
 
-.catalog-menu {
-  display: block;
-  .list-clean();
+.page-title--extra .page-title__title {
+  margin-top: -6px;
 }
 
-.catalog-menu__item {
+.page-title__list--catalog .page-title__item {
+  position: relative;
+  height: 100px;
+  width: 100%;
+
+  &:hover {
+    height: 105px;
+    margin-top: -5px;
+  }
+
+  &:active {
+    height: 105px;
+    margin-top: -5px;
+  }
+}
+
+.page-title__list--catalog .page-title__link {
   position: relative;
   display: flex;
   align-items: center;
-  height: 100px;
   width: 100%;
+  height: 100%;
+  font-size: 19px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 1);
 
   &::after {
     .absolute-elem();
@@ -69,30 +95,12 @@
     opacity: 0.3;
   }
 
-  &:hover {
-    height: 105px;
-    margin-top: -5px;
-
-    &::after {
-      opacity: 0.4;
-    }
-  }
-
-  &:active {
-    height: 105px;
-    margin-top: -5px;
-
-    &::after {
-      opacity: 0.1;
-    }
-  }
-
   &--interier {
     background-color: rgba(99, 209, 187, 1);
 
     &::after {
       right: 0;
-      background-image: url("../img/icon-interior.svg");
+      background-image: url("../img/interior.svg");
     }
 
     &:hover {
@@ -105,31 +113,37 @@
 
     &::after {
       right: 10px;
-      background-image: url("../img/icon-toy.svg");
+      background-image: url("../img/toy.svg");
     }
 
     &:hover {
       background-color: rgba(54, 187, 170, 1);
     }
   }
-}
 
-.catalog-menu__link {
-  margin-left: 30px;
-  width: 130px;
-  font-size: 19px;
-  line-height: 24px;
-  color: rgba(255, 255, 255, 1);
+  &:hover::after {
+    opacity: 0.4;
+  }
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
+
+    &::after {
+      opacity: 0.1;
+    }
   }
+}
+
+.page-title__link span {
+  display: block;
+  margin-left: 35px;
+  width: 130px;
 }
 
 @media (min-width: @tablet-width) {
   .page-title {
     &--index {
-      margin-bottom: 35px;
+      margin-bottom: 45px;
       background-image: url("../img/hero-tablet@1x.jpg");
       background-size: 1150px auto;
       background-position: 50% 0;
@@ -185,22 +199,28 @@
     margin-top: 55px;
   }
 
-  .catalog-menu {
+  .page-title__list--catalog {
     display: flex;
     justify-content: space-between;
   }
 
-  .catalog-menu__item {
+  .page-title__list--catalog .page-title__item {
     width: 50%;
     height: 120px;
-
-    &::after {
-      right: 40px;
-    }
 
     &:hover {
       height: 125px;
       margin-top: -5px;
+    }
+  }
+
+  .page-title__list--catalog .page-title__link {
+    &--interier::after {
+      right: 15px;
+    }
+
+    &--toys::after {
+      right: 35px;
     }
   }
 }
@@ -208,7 +228,7 @@
 @media (min-width: @desktop-width) {
   .page-title {
     &--index {
-      margin-bottom: 135px;
+      margin-bottom: 125px;
       background-image: url("../img/hero-desktop@1x.jpg");
       background-position: 50% 0;
 
@@ -218,7 +238,7 @@
     }
 
     &--extra {
-      margin-bottom: 130px;
+      margin-bottom: 128px;
       height: 255px;
     }
 
@@ -232,16 +252,16 @@
     justify-content: space-between;
   }
 
-  .page-title__list {
+  .page-title__list--sale {
     display: flex;
     flex-wrap: wrap;
   }
 
-  .page-title__item {
-    margin-right: 40px;
+  .page-title__list--sale .page-title__item {
+    margin-right: 60px;
   }
 
-  .page-title__link {
+  .page-title__list--sale .page-title__link {
     &:hover {
       color: rgba(0, 0, 0, 0.6);
     }
@@ -259,5 +279,10 @@
   .main-page__wrapper .page-title__title {
     margin-bottom: 355px;
     width: 700px;
+  }
+
+  .page-title__list--catalog .page-title__link {
+    font-size: 20px;
+    line-height: 30px;
   }
 }

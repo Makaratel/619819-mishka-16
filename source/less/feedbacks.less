@@ -1,6 +1,6 @@
 .feedbacks {
   position: relative;
-  margin-bottom: 90px;
+  margin-bottom: 83px;
 
   &::after {
     .absolute-elem();
@@ -17,11 +17,14 @@
 .feedbacks__title {
   margin: 0;
   padding: 0;
+  margin-bottom: 25px;
+  font-size: 25px;
+  line-height: 30px;
 }
 
 .feedbacks__list {
   .list-clean();
-  margin-bottom: 35px;
+  margin-bottom: 33px;
 }
 
 .quote {
@@ -31,17 +34,31 @@
 }
 
 .quote__text {
-  margin-bottom: 30px;
+  margin-bottom: 27px;
+  line-height: 30px;
 }
 
 .quote__author {
   .text-bold();
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.quote__mail {
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.feedbacks__button {
+  font-size: 18px;
 }
 
 @media (min-width: @tablet-width) {
   .feedbacks {
-    padding-top: 85px;
-    margin-bottom: 150px;
+    padding-top: 75px;
+    margin-bottom: 143px;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0% 0%;
@@ -65,7 +82,7 @@
   .feedbacks__title {
     font-size: 43px;
     line-height: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 33px;
   }
 
   .quote {
@@ -77,13 +94,13 @@
   .quote__text {
     font-size: 17px;
     line-height: 30px;
-    margin-bottom: 60px;
+    margin-bottom: 58px;
   }
 
   .feedbacks__button {
     position: absolute;
     width: 170px;
-    top: 0;
+    top: 2px;
     right: 0;
   }
 }
@@ -91,18 +108,19 @@
 @media (min-width: @desktop-width) {
   .feedbacks {
     padding-top: 0;
-    margin-bottom: 165px;
+    margin-bottom: 155px;
     background-image: none;
 
     &::after {
       height: 25px;
-      bottom: -95px;
+      bottom: -92px;
       background-size: auto 25px;
     }
   }
 
   .feedbacks .container {
-    padding-top: 85px;
+    padding-top: 70px;
+    padding-bottom: 65px;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0% 0%;
@@ -113,14 +131,21 @@
   }
 
   .feedbacks__title {
-    margin-left: 185px;
+    margin-left: 172px;
+    font-size: 53px;
+    line-height: 57px;
   }
 
   .feedbacks__list {
-    margin-left: 185px;
+    margin-left: 175px;
+  }
+
+  .quote__text {
+    width: 768px;
+    margin-bottom: 40px;
   }
 
   .feedbacks__button {
-    top: 85px;
+    top: 80px;
   }
 }

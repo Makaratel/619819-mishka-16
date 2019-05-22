@@ -1,5 +1,5 @@
 .footer {
-  margin-top: 40px;
+  margin-top: 45px;
   height: 160px;
   display: flex;
   flex-wrap: wrap;
@@ -26,10 +26,10 @@
   .list-clean();
 
   &::after {
-    width: 100%;
+    width: 260px;
     height: 1px;
     bottom: -27px;
-    left: 0;
+    left: -60px;
     background-color: rgba(229, 229, 229, 1);
     .absolute-elem();
   }
@@ -40,12 +40,12 @@
   width: 30px;
   height: 30px;
 
-  &:hover {
-    color: rgba(70, 193, 174, 1);
+  &:hover .footer__icon {
+    fill: rgba(70, 193, 174, 1);
   }
 
-  &:active {
-    color: rgba(70, 193, 174, 0.3);
+  &:active .footer__icon {
+    fill: rgba(70, 193, 174, 0.3);
   }
 }
 
@@ -58,27 +58,30 @@
   font-size: 19px;
   line-height: 10px;
 
-  &:hover .footer__span {
-    color: rgba(70, 193, 174, 1);
+  &:hover .footer__span svg {
+    fill: rgba(70, 193, 174, 1);
   }
 
   &:active {
     color: rgba(0, 0, 0, 0.3);
   }
 
-  &:active .footer__span {
-    color: rgba(70, 193, 174, 0.3);
+  &:active .footer__span svg {
+    fill: rgba(70, 193, 174, 0.3);
   }
 }
 
 .footer__span {
   margin-left: 20px;
-  color: rgba(99, 209, 187, 1);
+}
+
+.footer__span svg {
+  fill: rgba(99, 209, 187, 1);
 }
 
 @media (min-width: @tablet-width) {
   .footer {
-    margin-top: 60px;
+    margin-top: 48px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -94,12 +97,12 @@
     display: block;
     width: 180px;
 
-    &:hover {
-      color: rgba(70, 193, 174, 1);
+    &:hover .footer__icon--logo {
+      fill: rgba(70, 193, 174, 1);
     }
 
-    &:active {
-      color: rgba(70, 193, 174, 0.3);
+    &:active .footer__icon--logo {
+      fill: rgba(70, 193, 174, 0.3);
     }
   }
 
@@ -110,6 +113,6 @@
 
 @media (min-width: @desktop-width) {
   .footer {
-    margin-top: 105px;
+    margin-top: 108px;
   }
 }
