@@ -84,7 +84,7 @@
     color: rgba(0, 0, 0, 0.6);
   }
 
-  &:hover .main-nav__icon svg{
+  &:hover .main-nav__icon svg {
     fill: rgba(138, 221, 204, 1);
   }
 
@@ -92,7 +92,7 @@
     color: rgba(0, 0, 0, 0.3);
   }
 
-  &:active .main-nav__icon svg{
+  &:active .main-nav__icon svg {
     fill: rgba(138, 221, 204, 0.3);
   }
 }
@@ -106,7 +106,7 @@
   color: rgba(0, 0, 0, 0.2);
 }
 
-.main-nav__icon svg{
+.main-nav__icon svg {
   fill: rgba(0, 0, 0, 0.2);
 }
 
@@ -124,6 +124,26 @@
 
   .menu-button {
     display: none;
+  }
+
+  .main-nav__list--links {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: -60px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 15px;
+  }
+
+  .main-nav__list--links .main-nav__item {
+    margin-right: 34px;
+    height: 60px;
+  }
+
+  .main-nav__list--user {
+    margin-left: auto;
+    display: flex;
   }
 
   .main-nav__item {
@@ -169,28 +189,6 @@
   }
 }
 
-@media (min-width: @tablet-width) and (max-width: @desktop-width) {
-  .main-nav__list--links {
-    position: absolute;
-    z-index: 2;
-    left: 0;
-    bottom: -60px;
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 15px;
-  }
-
-  .main-nav__list--links .main-nav__item {
-    margin-right: 34px;
-    height: 60px;
-  }
-
-  .main-nav__list--user {
-    margin-left: auto;
-    display: flex;
-  }
-}
-
 @media (min-width: @desktop-width) {
   .main-nav {
     display: flex;
@@ -202,7 +200,7 @@
 
   .main-nav__logo {
     order: 2;
-    margin-left: -28px;
+    margin-left: 75px;
   }
 
   .main-nav__image {
@@ -219,7 +217,16 @@
     order: 3;
   }
 
+  .main-nav__list--links {
+    position: relative;
+    bottom: 0;
+    height: 85px;
+    font-size: 17px;
+  }
+
   .main-nav__list--links .main-nav__item {
+    margin-right: 0;
+    height: 100%;
     border-right: 1px solid rgba(236, 236, 236, 1);
 
     &--catalog {

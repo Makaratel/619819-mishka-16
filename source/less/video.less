@@ -1,12 +1,6 @@
 .video {
+  position: relative;
   margin-bottom: 60px;
-}
-
-.video__list {
-  .list-clean();
-}
-
-.video__item {
   padding-top: 25px;
   padding-bottom: 30px;
   outline: 1px solid rgba(236, 236, 236, 1);
@@ -42,33 +36,28 @@
   fill: rgba(99, 209, 187, 1);
 }
 
-.video__picture {
-  position: relative;
+.video__preview {
+  margin-bottom: -5px;
+}
+
+.video__play {
+  position: absolute;
   cursor: pointer;
+  width: 100px;
+  height: 75px;
+  top: 140px;
+  left: 50%;
+  margin-left: -50px;
 
-  &::after {
-    .absolute-elem();
-    width: 100px;
-    height: 75px;
-    top: 50%;
-    left: 50%;
-    margin-top: -100px;
-    margin-left: -50px;
-    background-image: url("../img/icon-play.svg");
-  }
-
-  &:hover::after {
+  &:hover,
+  &:focus {
     transform: scale(1.2);
   }
 
-  &:active::after {
+  &:active {
     transform: scale(0.8);
     opacity: 0.7;
   }
-}
-
-.video__preview {
-  margin-bottom: -5px;
 }
 
 .video__description {
@@ -90,9 +79,6 @@
 @media (min-width: @tablet-width) {
   .video {
     margin-bottom: 63px;
-  }
-
-  .video__item {
     padding-bottom: 45px;
     display: flex;
     flex-wrap: wrap;
@@ -111,7 +97,7 @@
   }
 
   .video__icon {
-    top: 0px;
+    top: 0;
   }
 
   .video__description {
@@ -124,10 +110,6 @@
 
   .video__picture {
     margin-top: -15px;
-
-    &::after {
-      margin-top: -62px;
-    }
   }
 
   .video__preview {
@@ -135,6 +117,10 @@
     margin-bottom: 35px;
     width: 668px;
     height: 455px;
+  }
+
+  .video__play {
+    top: 200px;
   }
 
   .video__wrapper,
@@ -147,16 +133,15 @@
 @media (min-width: @desktop-width) {
   .video {
     margin-bottom: -24px;
-  }
-
-  .video__item {
-    height: 450px;
     padding-bottom: 0;
+    min-height: 430px;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
   .video__title {
     margin-top: 70px;
-    margin-left: 80px;
+    margin-right: 90px;
     margin-bottom: 33px;
     width: 200px;
   }
@@ -166,22 +151,33 @@
     left: 0;
   }
 
+  .video__picture {
+    position: absolute;
+    left: 0;
+  }
+
   .video__preview {
     width: 680px;
   }
 
+  .video__play {
+    top: 190px;
+    left: 340px;
+  }
+
   .video__wrapper {
-    margin-left: 10px;
-    width: calc(100% - 680px);
+    margin-right: 0;
+    width: calc(100% - 690px);
   }
 
   .video__description {
-    margin: 0 auto;
+    margin-left: 70px;
     margin-bottom: 45px;
     width: 230px;
   }
 
   .video__button {
-    width: 230px;
+    margin-left: 72px;
+    width: 226px;
   }
 }

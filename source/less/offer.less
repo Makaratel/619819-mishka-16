@@ -130,7 +130,8 @@
     cursor: pointer;
   }
 
-  &:hover::before {
+  &:hover::before,
+  &:focus::before {
     box-shadow: 0 0 0 2px rgba(98, 209, 196, 1);
   }
 
@@ -139,8 +140,8 @@
   }
 }
 
-input[id="accessoire"]:checked ~ label[for="accessoire"]::before,
-input[id="toy"]:checked ~ label[for="toy"]::before {
+.type-field__input[id="accessoire"]:checked ~ .type-field__label::before,
+.type-field__input[id="toy"]:checked ~ .type-field__label::before {
   background-color: rgba(98, 209, 196, 1);
 }
 
@@ -183,7 +184,8 @@ input[id="toy"]:checked ~ label[for="toy"]::before {
     cursor: pointer;
   }
 
-  &:hover::before {
+  &:hover::before,
+  &:focus::before {
     border-color: rgba(98, 209, 196, 1);
   }
 
@@ -205,7 +207,7 @@ input[id="toy"]:checked ~ label[for="toy"]::before {
   margin-bottom: 24px;
 
   &:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 }
 
@@ -359,7 +361,7 @@ input[id="toy"]:checked ~ label[for="toy"]::before {
   .name-field__item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .name-field__label {

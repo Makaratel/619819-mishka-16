@@ -48,7 +48,7 @@
     </header>
 
     <main>
-      <div class="main-page__wrapper page-title page-title--extra">
+      <div class="page-title page-title--extra">
         <div class="container">
           <div class="page-title__wrapper">
             <ul class="page-title__list page-title__list--sale">
@@ -71,12 +71,12 @@
               <ul class="type-field__list field-list">
                 <li class="type-field__item field-item">
                   <input class="type-field__input" type="radio" name="type" id="accessoire" checked>
-                  <label class="type-field__label" for="accessoire">Аксессуар для интерьера</label>
+                  <label class="type-field__label" for="accessoire" tabindex="0">Аксессуар для интерьера</label>
                 </li>
 
                 <li class="type-field__item field-item">
                   <input class="type-field__input" type="radio" name="type" id="toy">
-                  <label class="type-field__label" for="toy">Детская игрушка</label>
+                  <label class="type-field__label" for="toy" tabindex="0">Детская игрушка</label>
                 </li>
               </ul>
             </div>
@@ -88,32 +88,32 @@
               <ul class="color-field__list field-list">
                 <li class="color-field__item field-item">
                   <input class="color-field__input" type="checkbox" name="white" id="white" checked>
-                  <label class="color-field__label" for="white">Белый</label>
+                  <label class="color-field__label" for="white" tabindex="0">Белый</label>
                 </li>
 
                 <li class="color-field__item field-item">
                   <input class="color-field__input" type="checkbox" name="gray" id="gray" checked>
-                  <label class="color-field__label" for="gray">Серый</label>
+                  <label class="color-field__label" for="gray" tabindex="0">Серый</label>
                 </li>
 
                 <li class="color-field__item field-item">
                   <input class="color-field__input" type="checkbox" name="tiffany" id="tiffany">
-                  <label class="color-field__label" for="tiffany">«Тиффани»</label>
+                  <label class="color-field__label" for="tiffany" tabindex="0">«Тиффани»</label>
                 </li>
 
                 <li class="color-field__item field-item">
                   <input class="color-field__input" type="checkbox" name="black" id="black">
-                  <label class="color-field__label" for="black">Черный</label>
+                  <label class="color-field__label" for="black" tabindex="0">Черный</label>
                 </li>
 
                 <li class="color-field__item field-item">
                   <input class="color-field__input" type="checkbox" name="pink" id="pink">
-                  <label class="color-field__label" for="pink">Розовый</label>
+                  <label class="color-field__label" for="pink" tabindex="0">Розовый</label>
                 </li>
 
                 <li class="color-field__item field-item">
                   <input class="color-field__input" type="checkbox" name="orange" id="orange">
-                  <label class="color-field__label" for="orange">Оранжевый</label>
+                  <label class="color-field__label" for="orange" tabindex="0">Оранжевый</label>
                 </li>
               </ul>
             </div>
@@ -152,7 +152,7 @@
           <fieldset class="offer__field mail-field">
             <div class="mail__wrapper field-wrapper container">
               <h3 class="mail-field__title field-title">E-MAIL</h3>
-              <input class="mail-field__input field-input" type="email" name="mail" id="mail" placeholder="Ваш Email*">
+              <input class="mail-field__input field-input" type="email" name="mail" id="email" placeholder="Ваш Email*">
               <span class="mail-field__icon field-icon"><svg width="32" height="26"><use xlink:href="#icon-mail"></use></svg></span>
             </div>
           </fieldset>
@@ -189,14 +189,12 @@
           </a></li>
         </ul>
 
-        <a class="footer__academy" href="https://htmlacademy.ru/">
+        <a class="footer__academy" href="https://htmlacademy.ru/intensive/adaptive">
           Разработано<span class="footer__span"><svg width="30" height="35" aria-label="HTML Academy"><use xlink:href="#icon-logo-htmlacademy"></use></svg></span>
         </a>
       </div>
     </footer>
     <script src="js/script.js"></script>
-    <script src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js" async>
-      document.createElement( "picture" );
-    </script>
+    <script src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js" async></script>
   </body>
 </html>
