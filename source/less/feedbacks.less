@@ -22,23 +22,19 @@
   line-height: 30px;
 }
 
-.feedbacks__list {
-  .list-clean();
-  margin-bottom: 33px;
-}
-
-.quote {
+.feedbacks__quote {
   margin: 0;
   padding: 0;
+  margin-bottom: 33px;
   .text-normal();
 }
 
-.quote__text {
+.feedbacks__text {
   margin-bottom: 27px;
   line-height: 30px;
 }
 
-.quote__author {
+.feedbacks__author {
   .text-bold();
   display: inline-block;
   margin-bottom: 5px;
@@ -46,7 +42,7 @@
   line-height: 24px;
 }
 
-.quote__mail {
+.feedbacks__mail {
   font-size: 17px;
   line-height: 24px;
 }
@@ -59,12 +55,21 @@
   .feedbacks {
     padding-top: 75px;
     margin-bottom: 143px;
-    background-image: url("../img/review@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: 0% 0%;
 
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/review@2x.jpg");
+    &::before {
+      .absolute-elem();
+      top: 0;
+      left: 0;
+      width: 350px;
+      height: 455px;
+      background-image: url("../img/review@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: 0% 0%;
+      background-color: rgba(242, 242, 242, 1);
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/review@2x.jpg");
+      }
     }
 
     &::after {
@@ -85,13 +90,13 @@
     margin-bottom: 33px;
   }
 
-  .quote {
+  .feedbacks__quote {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
   }
 
-  .quote__text {
+  .feedbacks__text {
     font-size: 17px;
     line-height: 30px;
     margin-bottom: 58px;
@@ -111,6 +116,10 @@
     margin-bottom: 155px;
     background-image: none;
 
+    &::before {
+      display: none;
+    }
+
     &::after {
       height: 25px;
       bottom: -92px;
@@ -121,31 +130,49 @@
   .feedbacks .container {
     padding-top: 70px;
     padding-bottom: 65px;
-    background-image: url("../img/review@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: 0% 0%;
 
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/review@2x.jpg");
+    &::before {
+      .absolute-elem();
+      top: 0;
+      left: 0;
+      width: 350px;
+      height: 455px;
+      background-image: url("../img/review@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: 0% 0%;
+      background-color: rgba(242, 242, 242, 1);
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/review@2x.jpg");
+      }
     }
   }
 
   .feedbacks__title {
+    position: relative;
+    z-index: 1;
     margin-left: 172px;
     font-size: 53px;
     line-height: 57px;
   }
 
-  .feedbacks__list {
+  .feedbacks__quote {
+    position: relative;
+    z-index: 1;
     margin-left: 175px;
   }
 
-  .quote__text {
+  .feedbacks__text {
     width: 768px;
     margin-bottom: 40px;
   }
 
+  .feedbacks__controls {
+    z-index: 1;
+  }
+
   .feedbacks__button {
+    z-index: 1;
     top: 80px;
   }
 }
