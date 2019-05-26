@@ -44,8 +44,6 @@ var mapInit = function() {
   });
 };
 
-mapInit();
-
 for (var i = 0; i < menuLists.length; i++) {
   menuButton.classList.remove("menu-button--open");
   menuLists[i].classList.remove("main-nav__list--open");
@@ -85,3 +83,5 @@ openModal(modalOpenIndex);
 modalClose.addEventListener("click", function(){
   modal.classList.remove("modal-size--open");
 })
+
+mapInit();
